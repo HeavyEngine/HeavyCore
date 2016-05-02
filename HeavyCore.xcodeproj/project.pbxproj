@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		FCA7CF531CD1643400AC174C /* HeavyCore.h in Headers */ = {isa = PBXBuildFile; fileRef = FCA7CF521CD1643400AC174C /* HeavyCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCCB15531CD7F77D00DB613A /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCB15521CD7F77D00DB613A /* Entity.swift */; };
+		FCCB15551CD7F78C00DB613A /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCB15541CD7F78C00DB613A /* Behavior.swift */; };
+		FCCB15571CD7F88D00DB613A /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCB15561CD7F88D00DB613A /* Point.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FCA7CF4F1CD1643400AC174C /* HeavyCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HeavyCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA7CF521CD1643400AC174C /* HeavyCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeavyCore.h; sourceTree = "<group>"; };
 		FCA7CF541CD1643400AC174C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCC91A941CD7FF650014B257 /* Core.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Core.playground; path = Playgrounds/Core.playground; sourceTree = "<group>"; };
+		FCCB15521CD7F77D00DB613A /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Entity.swift; path = Common/Entity.swift; sourceTree = SOURCE_ROOT; };
+		FCCB15541CD7F78C00DB613A /* Behavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Behavior.swift; path = Common/Behavior.swift; sourceTree = SOURCE_ROOT; };
+		FCCB15561CD7F88D00DB613A /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Point.swift; path = Common/Utilities/Point.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +37,7 @@
 		FCA7CF451CD1643400AC174C = {
 			isa = PBXGroup;
 			children = (
+				FCC91A941CD7FF650014B257 /* Core.playground */,
 				FCA7CF511CD1643400AC174C /* HeavyCore */,
 				FCA7CF501CD1643400AC174C /* Products */,
 			);
@@ -46,10 +54,29 @@
 		FCA7CF511CD1643400AC174C /* HeavyCore */ = {
 			isa = PBXGroup;
 			children = (
+				FCCB15521CD7F77D00DB613A /* Entity.swift */,
+				FCCB15541CD7F78C00DB613A /* Behavior.swift */,
+				FCCB15511CD7F07700DB613A /* Utilities */,
 				FCA7CF521CD1643400AC174C /* HeavyCore.h */,
 				FCA7CF541CD1643400AC174C /* Info.plist */,
 			);
 			path = HeavyCore;
+			sourceTree = "<group>";
+		};
+		FCCB15511CD7F07700DB613A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FCCB15581CD7F98400DB613A /* Math */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		FCCB15581CD7F98400DB613A /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				FCCB15561CD7F88D00DB613A /* Point.swift */,
+			);
+			name = Math;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +157,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCCB15531CD7F77D00DB613A /* Entity.swift in Sources */,
+				FCCB15551CD7F78C00DB613A /* Behavior.swift in Sources */,
+				FCCB15571CD7F88D00DB613A /* Point.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +264,7 @@
 		FCA7CF581CD1643400AC174C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -244,12 +275,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.heavyengine.HeavyCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		FCA7CF591CD1643400AC174C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
