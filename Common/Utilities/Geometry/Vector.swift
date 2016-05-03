@@ -103,7 +103,7 @@ public struct Vector {
     return Vector.Normalize(self)
   }
 
-  public func toAngle() -> Radians {
+  public func angle() -> Radians {
     return Vector.Angle(self)
   }
 

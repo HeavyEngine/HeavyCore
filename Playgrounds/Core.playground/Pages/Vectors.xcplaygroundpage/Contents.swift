@@ -21,7 +21,7 @@ angle(myVector).inDegrees
 // These precision errors may be an issue?
 angle(rotate(myVector, theta: 45.inRadians)).inDegrees
 // OR
-myVector.rotate(45.inRadians).toAngle().inDegrees
+myVector.rotate(45.inRadians).angle().inDegrees
 
 
 var percent = 0.00
