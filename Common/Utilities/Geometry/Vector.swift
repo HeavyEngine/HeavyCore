@@ -71,10 +71,14 @@ public struct Vector {
 
   /// Returns a `Vector` that represents the given `Vector` rotated by `theta` radians.
   public static func Rotate(vector: Vector, theta: Radians) -> Vector {
-    return Vector(
-      dx: vector.dx * cos(theta) - vector.dy * sin(theta),
-      dy: vector.dx * sin(theta) + vector.dy * cos(theta)
+    return Vector(dx: vector.dx * cos(theta) - vector.dy * sin(theta),
+                  dy: vector.dx * sin(theta) + vector.dy * cos(theta)
     )
+  }
+
+  /// Performs a linear interpolation between two `Vector` values.
+  public static func LinearlyInterpolate(start: Vector, end: Vector, time: Double) -> Vector {
+    return start + time * (end - start)
   }
 
   // MARK: Chainable Manipulation Functions
@@ -105,6 +109,10 @@ public struct Vector {
 
   public func rotate(theta: Radians) -> Vector {
     return Vector.Rotate(self, theta: theta)
+  }
+
+  public func lerp(to vector:Vector, by time:Double) -> Vector {
+    return Vector.LinearlyInterpolate(self, end: vector, time: time)
   }
 }
 
