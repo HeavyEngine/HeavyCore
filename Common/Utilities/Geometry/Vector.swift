@@ -51,6 +51,11 @@ public func cross(left: Vector, right: Vector) -> Double {
   return left.dx * right.dy - left.dy * right.dx
 }
 
+/// Returns the dot product of two Vectors.
+public func dot(left: Vector, right: Vector) -> Double {
+  return left.dx * right.dx + left.dy * right.dy
+}
+
 /// Returns the normalized version of the given vector.
 public func normalize(vector: Vector) -> Vector {
   let lengthSquared = vector.dx * vector.dx + vector.dy * vector.dy
@@ -73,9 +78,36 @@ public func rotate(vector: Vector, theta: Radians) -> Vector {
   )
 }
 
-/// Returns the dot product of two Vectors.
-public func dot(left: Vector, right: Vector) -> Double {
-  return left.dx * right.dx + left.dy * right.dy
+// MARK: Manipulation Extensions
+public extension Vector {
+  
+  func Invert() -> Vector {
+    return invert(self)
+  }
+
+  func Scale(scalar: Double) -> Vector {
+    return scale(self, scalar: scalar)
+  }
+
+  func Cross(vector: Vector) -> Double {
+    return cross(self, right:vector)
+  }
+
+  func Dot(vector: Vector) -> Double {
+    return dot(self, right:vector)
+  }
+
+  func Normalize() -> Vector {
+    return normalize(self)
+  }
+
+  func toAngle() -> Radians {
+    return angle(self)
+  }
+
+  func Rotate(theta: Radians) -> Vector {
+    return rotate(self, theta: theta)
+  }
 }
 
 // MARK: Arithmetic Operators
