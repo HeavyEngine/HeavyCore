@@ -16,4 +16,9 @@ let oVector = Vector(radians: radians.inDegrees.inRadians)
 
 radVector == degVector && degVector == oVector
 
+angle(myVector).inDegrees
+
+// These precision errors may be an issue?
+angle(rotate(myVector, theta: 45.inRadians)).inDegrees
+
 //: [Next](@next)

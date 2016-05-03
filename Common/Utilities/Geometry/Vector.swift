@@ -60,6 +60,19 @@ public func normalize(vector: Vector) -> Vector {
   return vector / sqrt(lengthSquared)
 }
 
+/// Returns the angle of a given `Vector` in radians.
+public func angle(vector: Vector) -> Radians {
+  return atan2(vector.dx, vector.dy)
+}
+
+/// Returns a `Vector` that represents the given `Vector` rotated by `theta` radians.
+public func rotate(vector: Vector, theta: Radians) -> Vector {
+  return Vector(
+    dx: vector.dx * cos(theta) - vector.dy * sin(theta),
+    dy: vector.dx * sin(theta) + vector.dy * cos(theta)
+  )
+}
+
 /// Returns the dot product of two Vectors.
 public func dot(left: Vector, right: Vector) -> Double {
   return left.dx * right.dx + left.dy * right.dy
