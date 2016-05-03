@@ -3,5 +3,6 @@
     <pages>
         <page name='Points'/>
         <page name='Vectors'/>
+        <page name='Rectangles'/>
     </pages>
 </playground>

@@ -47,14 +47,20 @@ public extension Point {
   }
 }
 
+extension Point: Hashable {
+  public var hashValue: Int {
+    return self.x.hashValue &+ self.y.hashValue
+  }
+}
+
 extension Point: CustomStringConvertible {
   public var description: String {
-    return "(\(self.x),\(self.y))"
+    return "(x: \(self.x), y: \(self.y))"
   }
 }
 
 extension Point: CustomDebugStringConvertible {
   public var debugDescription: String {
-    return "(\(self.x),\(self.y))"
+    return "(x: \(self.x), y: \(self.y))"
   }
 }
