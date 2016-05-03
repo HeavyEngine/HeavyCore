@@ -20,7 +20,7 @@ public struct Vector {
     self.dx = dx
     self.dy = dy
   }
-  
+
   /// Creates a new unit (magnitude of 1) `Vector` based on a given angle in radians.
   public init(radians: Radians) {
     self.dx = cos(radians)
@@ -32,82 +32,117 @@ public struct Vector {
     self.dx = cos(degrees.inRadians)
     self.dy = sin(degrees.inRadians)
   }
+
+  // MARK: Static Manipulation Methods
+
+  /// Returns the inverse of the given `Vector`.
+  public static func Invert(vector: Vector) -> Vector {
+    return Vector(dx: -vector.dx, dy: -vector.dx)
+  }
+
+  /// Returns a `Vector` that has been scaled by the given `Double`.
+  public static func Scale(vector: Vector, scalar: Double) -> Vector {
+    return Vector(dx: vector.dx * scalar, dy: vector.dy * scalar)
+  }
+
+  /// Returns the cross product of two Vectors.
+  public static func Cross(left: Vector, right: Vector) -> Double {
+    return left.dx * right.dy - left.dy * right.dx
+  }
+
+  /// Returns the dot product of two Vectors.
+  public static func Dot(left: Vector, right: Vector) -> Double {
+    return left.dx * right.dx + left.dy * right.dy
+  }
+
+  /// Returns the normalized version of the given vector.
+  public static func Normalize(vector: Vector) -> Vector {
+    let lengthSquared = vector.dx * vector.dx + vector.dy * vector.dy
+    if lengthSquared ~= 0  || lengthSquared ~= 1 {
+      return vector
+    }
+    return vector / sqrt(lengthSquared)
+  }
+
+  /// Returns the angle of a given `Vector` in radians.
+  public static func Angle(vector: Vector) -> Radians {
+    return atan2(vector.dx, vector.dy)
+  }
+
+  /// Returns a `Vector` that represents the given `Vector` rotated by `theta` radians.
+  public static func Rotate(vector: Vector, theta: Radians) -> Vector {
+    return Vector(
+      dx: vector.dx * cos(theta) - vector.dy * sin(theta),
+      dy: vector.dx * sin(theta) + vector.dy * cos(theta)
+    )
+  }
+
+  // MARK: Chainable Manipulation Functions
+
+  public func invert() -> Vector {
+    return Vector.Invert(self)
+  }
+
+  public func scale(scalar: Double) -> Vector {
+    return Vector.Scale(self, scalar: scalar)
+  }
+
+  public func cross(vector: Vector) -> Double {
+    return Vector.Cross(self, right:vector)
+  }
+
+  public func dot(vector: Vector) -> Double {
+    return Vector.Dot(self, right:vector)
+  }
+
+  public func normalize() -> Vector {
+    return Vector.Normalize(self)
+  }
+
+  public func toAngle() -> Radians {
+    return Vector.Angle(self)
+  }
+
+  public func rotate(theta: Radians) -> Vector {
+    return Vector.Rotate(self, theta: theta)
+  }
 }
 
-// MARK: Manipulation Functions
+// MARK: Global Manipulation Functions
 
 /// Returns the inverse of the given `Vector`.
 public func invert(vector: Vector) -> Vector {
-  return Vector(dx: -vector.dx, dy: -vector.dx)
+  return Vector.Invert(vector)
 }
 
 /// Returns a `Vector` that has been scaled by the given `Double`.
 public func scale(vector: Vector, scalar: Double) -> Vector {
-  return Vector(dx: vector.dx * scalar, dy: vector.dy * scalar)
+  return Vector.Scale(vector, scalar: scalar)
 }
 
 /// Returns the cross product of two Vectors.
 public func cross(left: Vector, right: Vector) -> Double {
-  return left.dx * right.dy - left.dy * right.dx
+  return Vector.Cross(left, right: right)
 }
 
 /// Returns the dot product of two Vectors.
 public func dot(left: Vector, right: Vector) -> Double {
-  return left.dx * right.dx + left.dy * right.dy
+  return Vector.Dot(left, right: right)
 }
 
 /// Returns the normalized version of the given vector.
 public func normalize(vector: Vector) -> Vector {
-  let lengthSquared = vector.dx * vector.dx + vector.dy * vector.dy
-  if lengthSquared ~= 0  || lengthSquared ~= 1 {
-    return vector
-  }
-  return vector / sqrt(lengthSquared)
+  return Vector.Normalize(vector)
 }
 
 /// Returns the angle of a given `Vector` in radians.
 public func angle(vector: Vector) -> Radians {
-  return atan2(vector.dx, vector.dy)
+  return Vector.Angle(vector)
 }
 
 /// Returns a `Vector` that represents the given `Vector` rotated by `theta` radians.
 public func rotate(vector: Vector, theta: Radians) -> Vector {
-  return Vector(
-    dx: vector.dx * cos(theta) - vector.dy * sin(theta),
-    dy: vector.dx * sin(theta) + vector.dy * cos(theta)
-  )
-}
-
-// MARK: Manipulation Extensions
-public extension Vector {
-  
-  func Invert() -> Vector {
-    return invert(self)
-  }
-
-  func Scale(scalar: Double) -> Vector {
-    return scale(self, scalar: scalar)
-  }
-
-  func Cross(vector: Vector) -> Double {
-    return cross(self, right:vector)
-  }
-
-  func Dot(vector: Vector) -> Double {
-    return dot(self, right:vector)
-  }
-
-  func Normalize() -> Vector {
-    return normalize(self)
-  }
-
-  func toAngle() -> Radians {
-    return angle(self)
-  }
-
-  func Rotate(theta: Radians) -> Vector {
-    return rotate(self, theta: theta)
-  }
+  return Vector.Rotate(vector, theta: theta)
 }
 
 // MARK: Arithmetic Operators

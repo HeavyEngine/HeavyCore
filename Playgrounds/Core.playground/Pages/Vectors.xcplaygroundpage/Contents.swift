@@ -21,6 +21,7 @@ angle(myVector).inDegrees
 // These precision errors may be an issue?
 angle(rotate(myVector, theta: 45.inRadians)).inDegrees
 // OR
-myVector.Rotate(45.inRadians).toAngle().inDegrees
+myVector.rotate(45.inRadians).toAngle().inDegrees
+
 
 //: [Next](@next)
