@@ -7,26 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC6C7FCB1CD95D3D001E2F90 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FC61CD95D3D001E2F90 /* Point.swift */; };
+		FC6C7FCC1CD95D3D001E2F90 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FC71CD95D3D001E2F90 /* Protocols.swift */; };
+		FC6C7FCD1CD95D3D001E2F90 /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FC81CD95D3D001E2F90 /* Quad.swift */; };
+		FC6C7FCE1CD95D3D001E2F90 /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FC91CD95D3D001E2F90 /* Units.swift */; };
+		FC6C7FCF1CD95D3D001E2F90 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FCA1CD95D3D001E2F90 /* Vector.swift */; };
 		FCA7CF531CD1643400AC174C /* HeavyCore.h in Headers */ = {isa = PBXBuildFile; fileRef = FCA7CF521CD1643400AC174C /* HeavyCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FCC26AD31CD93FA8008CA8E5 /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC26AD21CD93FA8008CA8E5 /* Quad.swift */; };
-		FCC26AD51CD93FD9008CA8E5 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC26AD41CD93FD9008CA8E5 /* Point.swift */; };
-		FCC26AD71CD9440D008CA8E5 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC26AD61CD9440D008CA8E5 /* Protocols.swift */; };
-		FCC91A961CD900A70014B257 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC91A951CD900A70014B257 /* Vector.swift */; };
-		FCC91A9A1CD91A850014B257 /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC91A991CD91A850014B257 /* Units.swift */; };
 		FCCB15531CD7F77D00DB613A /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCB15521CD7F77D00DB613A /* Entity.swift */; };
 		FCCB15551CD7F78C00DB613A /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCB15541CD7F78C00DB613A /* Behavior.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC6C7FC61CD95D3D001E2F90 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		FC6C7FC71CD95D3D001E2F90 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		FC6C7FC81CD95D3D001E2F90 /* Quad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quad.swift; sourceTree = "<group>"; };
+		FC6C7FC91CD95D3D001E2F90 /* Units.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
+		FC6C7FCA1CD95D3D001E2F90 /* Vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
 		FCA7CF4F1CD1643400AC174C /* HeavyCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HeavyCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA7CF521CD1643400AC174C /* HeavyCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeavyCore.h; sourceTree = "<group>"; };
 		FCA7CF541CD1643400AC174C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FCC26AD21CD93FA8008CA8E5 /* Quad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Quad.swift; path = Common/Utilities/Geometry/Quad.swift; sourceTree = SOURCE_ROOT; };
-		FCC26AD41CD93FD9008CA8E5 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
-		FCC26AD61CD9440D008CA8E5 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = Common/Utilities/Geometry/Protocols.swift; sourceTree = SOURCE_ROOT; };
 		FCC91A941CD7FF650014B257 /* Core.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Core.playground; path = Playgrounds/Core.playground; sourceTree = "<group>"; };
-		FCC91A951CD900A70014B257 /* Vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vector.swift; path = Common/Utilities/Geometry/Vector.swift; sourceTree = SOURCE_ROOT; };
-		FCC91A991CD91A850014B257 /* Units.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Units.swift; path = Common/Utilities/Geometry/Units.swift; sourceTree = SOURCE_ROOT; };
 		FCCB15521CD7F77D00DB613A /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Entity.swift; path = Common/Entity.swift; sourceTree = SOURCE_ROOT; };
 		FCCB15541CD7F78C00DB613A /* Behavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Behavior.swift; path = Common/Behavior.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -42,6 +42,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC6C7FC51CD95D3D001E2F90 /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				FC6C7FC61CD95D3D001E2F90 /* Point.swift */,
+				FC6C7FC71CD95D3D001E2F90 /* Protocols.swift */,
+				FC6C7FC81CD95D3D001E2F90 /* Quad.swift */,
+				FC6C7FC91CD95D3D001E2F90 /* Units.swift */,
+				FC6C7FCA1CD95D3D001E2F90 /* Vector.swift */,
+			);
+			path = Geometry;
+			sourceTree = "<group>";
+		};
 		FCA7CF451CD1643400AC174C = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +76,7 @@
 			children = (
 				FCCB15521CD7F77D00DB613A /* Entity.swift */,
 				FCCB15541CD7F78C00DB613A /* Behavior.swift */,
+				FC6C7FC51CD95D3D001E2F90 /* Geometry */,
 				FCCB15511CD7F07700DB613A /* Utilities */,
 				FCA7CF521CD1643400AC174C /* HeavyCore.h */,
 				FCA7CF541CD1643400AC174C /* Info.plist */,
@@ -74,21 +87,8 @@
 		FCCB15511CD7F07700DB613A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				FCCB15581CD7F98400DB613A /* Math */,
 			);
 			name = Utilities;
-			sourceTree = "<group>";
-		};
-		FCCB15581CD7F98400DB613A /* Math */ = {
-			isa = PBXGroup;
-			children = (
-				FCC26AD41CD93FD9008CA8E5 /* Point.swift */,
-				FCC26AD61CD9440D008CA8E5 /* Protocols.swift */,
-				FCC26AD21CD93FA8008CA8E5 /* Quad.swift */,
-				FCC91A991CD91A850014B257 /* Units.swift */,
-				FCC91A951CD900A70014B257 /* Vector.swift */,
-			);
-			name = Math;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,12 +170,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCCB15531CD7F77D00DB613A /* Entity.swift in Sources */,
+				FC6C7FCE1CD95D3D001E2F90 /* Units.swift in Sources */,
 				FCCB15551CD7F78C00DB613A /* Behavior.swift in Sources */,
-				FCC26AD71CD9440D008CA8E5 /* Protocols.swift in Sources */,
-				FCC26AD31CD93FA8008CA8E5 /* Quad.swift in Sources */,
-				FCC26AD51CD93FD9008CA8E5 /* Point.swift in Sources */,
-				FCC91A961CD900A70014B257 /* Vector.swift in Sources */,
-				FCC91A9A1CD91A850014B257 /* Units.swift in Sources */,
+				FC6C7FCF1CD95D3D001E2F90 /* Vector.swift in Sources */,
+				FC6C7FCD1CD95D3D001E2F90 /* Quad.swift in Sources */,
+				FC6C7FCB1CD95D3D001E2F90 /* Point.swift in Sources */,
+				FC6C7FCC1CD95D3D001E2F90 /* Protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
