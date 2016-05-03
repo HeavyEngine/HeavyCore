@@ -2,6 +2,18 @@
 
 import HeavyCore
 
-let myVector = Vector()
+let myVector = Vector(dx: 1,dy: 1)
+normalize(myVector)
+let myAltVector = invert(myVector)
+cross(myVector, right: myAltVector)
+dot(myVector, right: myAltVector)
+
+let radians = 16.0
+
+let radVector = Vector(radians: radians)
+let degVector = Vector(degrees: radians.inDegrees)
+let oVector = Vector(radians: radians.inDegrees.inRadians)
+
+radVector == degVector && degVector == oVector
 
 //: [Next](@next)

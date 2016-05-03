@@ -20,6 +20,18 @@ public struct Vector {
     self.dx = dx
     self.dy = dy
   }
+  
+  /// Creates a new unit (magnitude of 1) `Vector` based on a given angle in radians.
+  public init(radians: Radians) {
+    self.dx = cos(radians)
+    self.dy = sin(radians)
+  }
+
+  /// Creates a new unit (magnitude of 1) `Vector` based on a given angle in Degrees.
+  public init(degrees: Degrees) {
+    self.dx = cos(degrees.inRadians)
+    self.dy = sin(degrees.inRadians)
+  }
 }
 
 // MARK: Manipulation Functions
@@ -78,6 +90,10 @@ public func / (left: Vector, right: Double) -> Vector {
   return Vector(dx: left.dx / right, dy: left.dy / right)
 }
 
+public func / (left: Double, right: Vector) -> Vector {
+  return Vector(dx: left / right.dx, dy: left / right.dy)
+}
+
 public func / (left: Vector, right: Vector) -> Vector {
   return Vector(dx: left.dx / right.dx, dy: left.dy / right.dy)
 }
@@ -99,12 +115,12 @@ extension Vector: Hashable {
 }
 extension Vector: CustomStringConvertible {
   public var description: String {
-    return "(\(self.dx),\(self.dy),\(self.magnitude))"
+    return "(dx: \(self.dx), dy: \(self.dy), m: \(self.magnitude))"
   }
 }
 
 extension Vector: CustomDebugStringConvertible {
   public var debugDescription: String {
-    return "(\(self.dx),\(self.dy), \(self.magnitude))"
+    return "(dx:\(self.dx), dy: \(self.dy), m: \(self.magnitude))"
   }
 }
