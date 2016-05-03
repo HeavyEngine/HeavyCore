@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		FCA7CF531CD1643400AC174C /* HeavyCore.h in Headers */ = {isa = PBXBuildFile; fileRef = FCA7CF521CD1643400AC174C /* HeavyCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FCC26AD31CD93FA8008CA8E5 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC26AD21CD93FA8008CA8E5 /* Rectangle.swift */; };
+		FCC26AD31CD93FA8008CA8E5 /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC26AD21CD93FA8008CA8E5 /* Quad.swift */; };
 		FCC26AD51CD93FD9008CA8E5 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC26AD41CD93FD9008CA8E5 /* Point.swift */; };
+		FCC26AD71CD9440D008CA8E5 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC26AD61CD9440D008CA8E5 /* Protocols.swift */; };
 		FCC91A961CD900A70014B257 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC91A951CD900A70014B257 /* Vector.swift */; };
-		FCC91A9A1CD91A850014B257 /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC91A991CD91A850014B257 /* General.swift */; };
+		FCC91A9A1CD91A850014B257 /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC91A991CD91A850014B257 /* Units.swift */; };
 		FCCB15531CD7F77D00DB613A /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCB15521CD7F77D00DB613A /* Entity.swift */; };
 		FCCB15551CD7F78C00DB613A /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCB15541CD7F78C00DB613A /* Behavior.swift */; };
 /* End PBXBuildFile section */
@@ -20,11 +21,12 @@
 		FCA7CF4F1CD1643400AC174C /* HeavyCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HeavyCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA7CF521CD1643400AC174C /* HeavyCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeavyCore.h; sourceTree = "<group>"; };
 		FCA7CF541CD1643400AC174C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FCC26AD21CD93FA8008CA8E5 /* Rectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rectangle.swift; path = Common/Utilities/Geometry/Rectangle.swift; sourceTree = SOURCE_ROOT; };
+		FCC26AD21CD93FA8008CA8E5 /* Quad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Quad.swift; path = Common/Utilities/Geometry/Quad.swift; sourceTree = SOURCE_ROOT; };
 		FCC26AD41CD93FD9008CA8E5 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		FCC26AD61CD9440D008CA8E5 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = Common/Utilities/Geometry/Protocols.swift; sourceTree = SOURCE_ROOT; };
 		FCC91A941CD7FF650014B257 /* Core.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Core.playground; path = Playgrounds/Core.playground; sourceTree = "<group>"; };
 		FCC91A951CD900A70014B257 /* Vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vector.swift; path = Common/Utilities/Geometry/Vector.swift; sourceTree = SOURCE_ROOT; };
-		FCC91A991CD91A850014B257 /* General.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = General.swift; path = Common/Utilities/Geometry/General.swift; sourceTree = SOURCE_ROOT; };
+		FCC91A991CD91A850014B257 /* Units.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Units.swift; path = Common/Utilities/Geometry/Units.swift; sourceTree = SOURCE_ROOT; };
 		FCCB15521CD7F77D00DB613A /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Entity.swift; path = Common/Entity.swift; sourceTree = SOURCE_ROOT; };
 		FCCB15541CD7F78C00DB613A /* Behavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Behavior.swift; path = Common/Behavior.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -81,9 +83,10 @@
 			isa = PBXGroup;
 			children = (
 				FCC26AD41CD93FD9008CA8E5 /* Point.swift */,
-				FCC91A991CD91A850014B257 /* General.swift */,
+				FCC26AD61CD9440D008CA8E5 /* Protocols.swift */,
+				FCC26AD21CD93FA8008CA8E5 /* Quad.swift */,
+				FCC91A991CD91A850014B257 /* Units.swift */,
 				FCC91A951CD900A70014B257 /* Vector.swift */,
-				FCC26AD21CD93FA8008CA8E5 /* Rectangle.swift */,
 			);
 			name = Math;
 			sourceTree = "<group>";
@@ -168,10 +171,11 @@
 			files = (
 				FCCB15531CD7F77D00DB613A /* Entity.swift in Sources */,
 				FCCB15551CD7F78C00DB613A /* Behavior.swift in Sources */,
-				FCC26AD31CD93FA8008CA8E5 /* Rectangle.swift in Sources */,
+				FCC26AD71CD9440D008CA8E5 /* Protocols.swift in Sources */,
+				FCC26AD31CD93FA8008CA8E5 /* Quad.swift in Sources */,
 				FCC26AD51CD93FD9008CA8E5 /* Point.swift in Sources */,
 				FCC91A961CD900A70014B257 /* Vector.swift in Sources */,
-				FCC91A9A1CD91A850014B257 /* General.swift in Sources */,
+				FCC91A9A1CD91A850014B257 /* Units.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
