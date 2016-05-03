@@ -66,17 +66,17 @@
 		FCCB15511CD7F07700DB613A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				FCCB15581CD7F98400DB613A /* Math */,
+				FCCB15581CD7F98400DB613A /* Geometry */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
 		};
-		FCCB15581CD7F98400DB613A /* Math */ = {
+		FCCB15581CD7F98400DB613A /* Geometry */ = {
 			isa = PBXGroup;
 			children = (
 				FCCB15561CD7F88D00DB613A /* Point.swift */,
 			);
-			name = Math;
+			name = Geometry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
