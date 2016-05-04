@@ -6,7 +6,6 @@
 //  Copyright © 2016 Heavy. All rights reserved.
 //
 
-
 /// A structure that contains an *x* and *y* value
 /// in order to specify a location in a two-dimensional
 /// coordinate system.
@@ -40,10 +39,9 @@ public func / (left: Point, right: Point) -> Point {
 }
 
 public extension Point {
-
   /// Returns a `Double` representing the distance between two points.
   public func distanceTo(point: Point) -> Double {
-    return sqrt(pow(self.x - point.x,2) + pow(self.y - point.y,2))
+    return sqrt(pow(self.x - point.x, 2) + pow(self.y - point.y, 2))
   }
 }
 

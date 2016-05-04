@@ -6,14 +6,15 @@
 //  Copyright © 2016 Heavy. All rights reserved.
 //
 
-/// A structure that contains a `dx` and `dy` value that represent a direction and magnitude in a two-dimensional coordinate system.
+/// A structure that contains a `dx` and `dy` value that represent a direction
+/// and magnitude in a two-dimensional coordinate system.
 public struct Vector {
   public var dx: Double
   public var dy: Double
 
   /// Returns the scalar magnitude of this vector.
   public var magnitude: Double {
-    return sqrt(pow(dx,2) + pow(dy,2))
+    return sqrt(pow(dx, 2) + pow(dy, 2))
   }
 
   public init(dx: Double = 0, dy: Double = 0) {
@@ -111,7 +112,7 @@ public struct Vector {
     return Vector.Rotate(self, theta: theta)
   }
 
-  public func lerp(to vector:Vector, by time:Double) -> Vector {
+  public func lerp(to vector: Vector, by time: Double) -> Vector {
     return Vector.LinearlyInterpolate(self, end: vector, time: time)
   }
 }
