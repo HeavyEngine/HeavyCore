@@ -14,9 +14,13 @@ public protocol HasBounds {
   var bounds: Quad { get }
 }
 
-public protocol CanContain {
+public protocol Contains {
   func contains(point: Point) -> Bool
   func contains(quad: Quad) -> Bool
+}
+
+public protocol Intersects {
+  func intersects(quad: Quad) -> Bool
 }
 
 public protocol HasArea {
