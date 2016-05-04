@@ -5,10 +5,12 @@
 //  Created by Dylan Wreggelsworth on 5/2/16.
 //  Copyright © 2016 Heavy. All rights reserved.
 //
+import Foundation
 
 /// A structure that contains an *x* and *y* value
 /// in order to specify a location in a two-dimensional
 /// coordinate system.
+
 public struct Point {
   public var x: Double
   public var y: Double

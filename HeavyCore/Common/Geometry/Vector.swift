@@ -5,6 +5,7 @@
 //  Created by Dylan Wreggelsworth on 5/3/16.
 //  Copyright © 2016 Heavy. All rights reserved.
 //
+import Foundation
 
 /// A structure that contains a `dx` and `dy` value that represent a direction
 /// and magnitude in a two-dimensional coordinate system.
