@@ -17,6 +17,11 @@ public struct Vector {
     return sqrt(pow(dx, 2) + pow(dy, 2))
   }
 
+  /// Returns the angle of a given `Vector` in radians.
+  public var angle: Radians {
+    return atan2(self.dx, self.dy)
+  }
+
   public init(dx: Double = 0, dy: Double = 0) {
     self.dx = dx
     self.dy = dy
@@ -65,11 +70,6 @@ public struct Vector {
     return vector / sqrt(lengthSquared)
   }
 
-  /// Returns the angle of a given `Vector` in radians.
-  public static func Angle(vector: Vector) -> Radians {
-    return atan2(vector.dx, vector.dy)
-  }
-
   /// Returns a `Vector` that represents the given `Vector` rotated by `theta` radians.
   public static func Rotate(vector: Vector, theta: Radians) -> Vector {
     return Vector(dx: vector.dx * cos(theta) - vector.dy * sin(theta),
@@ -102,10 +102,6 @@ public struct Vector {
 
   public func normalize() -> Vector {
     return Vector.Normalize(self)
-  }
-
-  public func angle() -> Radians {
-    return Vector.Angle(self)
   }
 
   public func rotate(theta: Radians) -> Vector {
@@ -142,11 +138,6 @@ public func dot(left: Vector, right: Vector) -> Double {
 /// Returns the normalized version of the given vector.
 public func normalize(vector: Vector) -> Vector {
   return Vector.Normalize(vector)
-}
-
-/// Returns the angle of a given `Vector` in radians.
-public func angle(vector: Vector) -> Radians {
-  return Vector.Angle(vector)
 }
 
 /// Returns a `Vector` that represents the given `Vector` rotated by `theta` radians.

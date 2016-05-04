@@ -1,5 +1,5 @@
 //
-//  Rectangle.swift
+//  Quad.swift
 //  HeavyCore
 //
 //  Created by Dylan Wreggelsworth on 5/3/16.
@@ -12,21 +12,21 @@ public struct Quad {
   public var width: Double
   public var height: Double
 
-  /// Returns the minimum value on the x axis in this quad.
+  /// Returns the minimum value on the x axis of this quad.
   public var minX: Double {
     return min(x, x + width)
   }
-  /// Returns the minimum value on the y axis in this quad.
+  /// Returns the minimum value on the y axis of this quad.
   public var minY: Double {
     return min(y, y + height)
   }
 
-  /// Returns the maximum value on the x axis in this quad.
+  /// Returns the maximum value on the x axis of this quad.
   public var maxX: Double {
     return max(x, x + width)
   }
 
-  /// Returns the maximum value on the y axis in this quad.
+  /// Returns the maximum value on the y axis of this quad.
   public var maxY: Double {
     return max(y, y + height)
   }
@@ -39,6 +39,8 @@ public struct Quad {
   }
 
   // MARK: Static Manipulation Methods
+  // TODO: Expand
+  // TODO: Offset
 }
 
 // MARK: Comparison Operators

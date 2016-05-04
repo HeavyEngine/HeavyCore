@@ -16,12 +16,12 @@ let oVector = Vector(radians: radians.inDegrees.inRadians)
 
 radVector == degVector && degVector == oVector
 
-angle(myVector).inDegrees
+myVector.angle.inDegrees
 
 // These precision errors may be an issue?
-angle(rotate(myVector, theta: 45.inRadians)).inDegrees
+rotate(myVector, theta: 45.inRadians).angle.inDegrees
 // OR
-myVector.rotate(45.inRadians).angle().inDegrees
+myVector.rotate(45.inRadians).angle.inDegrees
 
 var percent = 0.00
 for frame in 0.stride(through: 100, by: 1) {
