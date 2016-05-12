@@ -8,6 +8,6 @@
 public typealias Update = (delta: Double) -> ()
 
 public protocol Behavior: class {
-  var id: Int { get }
+  var id: Int? { get set }
   func update(delta: Double)
 }

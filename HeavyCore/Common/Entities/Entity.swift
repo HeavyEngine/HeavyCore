@@ -18,6 +18,7 @@ public struct Entity {
     behaviors.removeAtIndex(index)
   }
   public mutating func add(behavior: Behavior) {
+    behavior.id = behaviors.count
     behaviors.append(behavior)
   }
   public mutating func update(delta: Double) {
