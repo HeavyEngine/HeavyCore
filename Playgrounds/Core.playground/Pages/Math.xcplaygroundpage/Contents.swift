@@ -24,7 +24,7 @@ Math.clamp(0.5, min: 0, max: 1)
 Math.clamp(1.5, min: 0, max: 1)
 
 var percent = 0.00
-for value in 0.stride(through: 100, by: 1) {
+for value in 0.stride(to: 100, by: 1) {
   percent = Double(value)/100
   Math.lerp(0, end: 100, weight: percent)
 }
