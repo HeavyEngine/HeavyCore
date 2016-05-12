@@ -30,5 +30,4 @@ for frame in 0.stride(through: 100, by: 1) {
   print(lerpVector, "\(percent * 100)%")
 }
 
-
 //: [Next](@next)
