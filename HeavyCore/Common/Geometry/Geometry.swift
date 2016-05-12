@@ -1,5 +1,5 @@
 //
-//  Protocols.swift
+//  Geometry.swift
 //  HeavyCore
 //
 //  Created by Dylan Wreggelsworth on 5/3/16.
