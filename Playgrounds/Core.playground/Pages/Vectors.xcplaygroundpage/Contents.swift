@@ -24,10 +24,12 @@ rotate(myVector, theta: 45.inRadians).angle.inDegrees
 myVector.rotate(45.inRadians).angle.inDegrees
 
 var percent = 0.00
-for frame in 0.stride(through: 100, by: 1) {
+for frame in 0.stride(to: 100, by: 1) {
   percent = Double(frame)/100
   let lerpVector = myVector.lerp(to: Vector(dx: 2, dy: 2), by:percent)
-  print(lerpVector, "\(percent * 100)%")
+  lerpVector.dx
+  lerpVector.dy
+  lerpVector.magnitude
 }
 
 
