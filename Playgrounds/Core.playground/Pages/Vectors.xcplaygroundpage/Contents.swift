@@ -19,7 +19,7 @@ radVector == degVector && degVector == oVector
 myVector.angle.inDegrees
 
 // These precision errors may be an issue?
-myVector.rotate(45.inRadians).angle.inDegrees
+//myVector.rotate(45.radian).angle.inDegrees
 
 var percent = 0.00
 for frame in 0.stride(to: 100, by: 1) {
