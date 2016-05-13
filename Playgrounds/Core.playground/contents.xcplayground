@@ -5,6 +5,5 @@
         <page name='Quads'/>
         <page name='Math'/>
         <page name='Vectors'/>
-        <page name='Timer'/>
     </pages>
 </playground>
