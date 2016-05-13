@@ -2,7 +2,9 @@
 <playground version='6.0' target-platform='ios'>
     <pages>
         <page name='Points'/>
-        <page name='Vectors'/>
         <page name='Quads'/>
+        <page name='Math'/>
+        <page name='Vectors'/>
+        <page name='Timer'/>
     </pages>
 </playground>
