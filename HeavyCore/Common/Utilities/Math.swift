@@ -9,6 +9,7 @@
 import Foundation
 
 public struct Math {
+
   /// Determine if the two numbers are within a distance from each other.
   /// Based on http://floating-point-gui.de/errors/comparison/
   public static func aboutEqual(a: Double, _ b: Double, delta: Double = DBL_EPSILON) -> Bool {
@@ -55,6 +56,7 @@ public struct Math {
   public static func lerp(start: Double, end: Double, weight: Double) -> Double {
     return (1.0 - weight) * start + weight * end
   }
+
 }
 
 public extension Double {
