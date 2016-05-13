@@ -3,10 +3,10 @@
 import HeavyCore
 
 let myVector = Vector(dx: 1,dy: 1)
-normalize(myVector)
-let myAltVector = invert(myVector)
-cross(myVector, right: myAltVector)
-dot(myVector, right: myAltVector)
+myVector.normalize()
+let myAltVector = myVector.invert()
+myVector.cross(myAltVector)
+myVector.dot(myAltVector)
 
 let radians = 16.0
 
@@ -19,15 +19,15 @@ radVector == degVector && degVector == oVector
 myVector.angle.inDegrees
 
 // These precision errors may be an issue?
-rotate(myVector, theta: 45.inRadians).angle.inDegrees
-// OR
 myVector.rotate(45.inRadians).angle.inDegrees
 
 var percent = 0.00
-for frame in 0.stride(through: 100, by: 1) {
+for frame in 0.stride(to: 100, by: 1) {
   percent = Double(frame)/100
   let lerpVector = myVector.lerp(to: Vector(dx: 2, dy: 2), by:percent)
-  print(lerpVector, "\(percent * 100)%")
+  lerpVector.dx
+  lerpVector.dy
+  lerpVector.magnitude
 }
 
 
