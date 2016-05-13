@@ -26,6 +26,8 @@
 		FC6C80101CD963EE001E2F90 /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FDF1CD96200001E2F90 /* Quad.swift */; };
 		FC6C80111CD963EE001E2F90 /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FE01CD96200001E2F90 /* Units.swift */; };
 		FC6C80121CD963EE001E2F90 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FE11CD96200001E2F90 /* Vector.swift */; };
+		FC8D29591CE50BE9006E75F8 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8D29581CE50BE9006E75F8 /* Timer.swift */; };
+		FC8D295A1CE50BE9006E75F8 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8D29581CE50BE9006E75F8 /* Timer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,7 @@
 		FC6C7FFF1CD962E5001E2F90 /* HeavyCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeavyCoreTests.swift; sourceTree = "<group>"; };
 		FC6C80011CD962E5001E2F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC6C80081CD96376001E2F90 /* Core.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Core.playground; path = ../../Playgrounds/Core.playground; sourceTree = "<group>"; };
+		FC8D29581CE50BE9006E75F8 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		FC6C7FE21CD96200001E2F90 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				FC8D29581CE50BE9006E75F8 /* Timer.swift */,
 			);
 			name = Utilities;
 			path = ../../Common/Utilities;
@@ -262,6 +266,7 @@
 				FC2D40AF1CE6545A005CA5CA /* Angle.swift in Sources */,
 				FC6C80091CD963ED001E2F90 /* Point.swift in Sources */,
 				FC6C800A1CD963ED001E2F90 /* Protocols.swift in Sources */,
+				FC8D29591CE50BE9006E75F8 /* Timer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +281,7 @@
 				FC2D40B01CE6545A005CA5CA /* Angle.swift in Sources */,
 				FC6C80111CD963EE001E2F90 /* Units.swift in Sources */,
 				FC3F30A21CD99DC20014ECD5 /* Entity.swift in Sources */,
+				FC8D295A1CE50BE9006E75F8 /* Timer.swift in Sources */,
 				FC6C80121CD963EE001E2F90 /* Vector.swift in Sources */,
 				FC6C80001CD962E5001E2F90 /* HeavyCoreTests.swift in Sources */,
 			);
