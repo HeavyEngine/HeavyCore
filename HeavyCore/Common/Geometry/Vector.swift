@@ -10,54 +10,57 @@ import Foundation
 /// A structure that contains a `dx` and `dy` value that represent a direction
 /// and magnitude in a two-dimensional coordinate system.
 public struct Vector {
-  public var dx: Double
-  public var dy: Double
+  public var angle = Angle(radians: 0)
 
-  /// Returns the scalar magnitude of this vector.
-  public var magnitude: Double {
-    return sqrt(pow(dx, 2) + pow(dy, 2))
+  /// The scalar magnitude of this vector.
+  public var magnitude: Numeric = 1.0
+
+  public var dx: Double {
+    return cos(angle) * magnitude
   }
 
-  /// Returns the angle of a given `Vector` in radians.
-  public var angle: Radians {
-    return atan2(self.dx, self.dy)
+  public var dy: Double {
+    return sin(angle) * magnitude
   }
 
-  public init(dx: Double = 0, dy: Double = 0) {
-    self.dx = dx
-    self.dy = dy
+  internal mutating func updateAngleAndMagnitude(dx dx: Numeric, dy: Numeric) {
+    angle = atan(dy / dx)
+    magnitude = sqrt(dx * dx + dy * dy)
+  }
+
+
+  public init(dx: Numeric = 0, dy: Numeric = 0) {
+    updateAngleAndMagnitude(dx: dx, dy: dy)
   }
 
   /// Creates a new unit (magnitude of 1) `Vector` based on a given angle in radians.
-  public init(radians: Radians) {
-    self.dx = cos(radians)
-    self.dy = sin(radians)
+  public init(angle: Angle, magnitude: Numeric = 1) {
+    self.angle     = angle
+    self.magnitude = magnitude
   }
 
-  /// Creates a new unit (magnitude of 1) `Vector` based on a given angle in Degrees.
-  public init(degrees: Degrees) {
-    self.dx = cos(degrees.inRadians)
-    self.dy = sin(degrees.inRadians)
-  }
 
   // MARK: Static Manipulation Methods
 
   /// Returns the inverse of the given `Vector`.
-  public static func invert(vector: Vector) -> Vector {
-    return Vector(dx: -vector.dx, dy: -vector.dy)
-  }
-
-  public func invert() -> Vector {
-    return Vector.invert(self)
+//  public static func invert(vector: Vector) -> Vector {
+//    return Vector(dx: -vector.dx, dy: -vector.dy)
+//  }
+//
+//  public func invert() -> Vector {
+//    return Vector.invert(self)
+//  }
+  public mutating func scale(by multiplier: Numeric) {
+    self.magnitude = self.magnitude * multiplier
   }
 
   /// Returns a `Vector` that has been scaled by the given `Double`.
-  public static func scale(vector: Vector, by scalar: Double) -> Vector {
-    return Vector(dx: vector.dx * scalar, dy: vector.dy * scalar)
+  public static func scaled(vector: Vector, by multiplier: Numeric) -> Vector {
+    return Vector(angle: vector.angle, magnitude: vector.magnitude * multiplier)
   }
 
-  public func scale(scalar: Double) -> Vector {
-    return Vector.scale(self, by: scalar)
+  public func scaled(by multiplier: Numeric) -> Vector {
+    return Vector.scaled(self, by: multiplier)
   }
 
   /// Returns the cross product of two Vectors.
@@ -79,16 +82,16 @@ public struct Vector {
   }
 
   /// Returns the normalized version of the given vector.
-  public static func normalize(vector: Vector) -> Vector {
-    let lengthSquared = vector.dx * vector.dx + vector.dy * vector.dy
-    if lengthSquared ~= 0  || lengthSquared ~= 1 {
-      return vector
-    }
-    return vector / sqrt(lengthSquared)
+  public static func normalized(vector: Vector) -> Vector {
+    return Vector(angle: vector.angle)
   }
 
-  public func normalize() -> Vector {
-    return Vector.normalize(self)
+  public func normalized() -> Vector {
+    return Vector.normalized(self)
+  }
+
+  public mutating func normalize() {
+    magnitude = 1
   }
 
   ///  Returns a `Vector` that represents the given `Vector` rotated by `theta` radians.
@@ -127,11 +130,11 @@ public func - (left: Vector, right: Vector) -> Vector {
 }
 
 public func * (left: Vector, right: Double) -> Vector {
-  return Vector.scale(left, by: right)
+  return Vector.scaled(left, by: right)
 }
 
 public func * (left: Double, right: Vector) -> Vector {
-  return Vector.scale(right, by: left)
+  return Vector.scaled(right, by: left)
 }
 
 public func * (left: Vector, right: Vector) -> Vector {
@@ -162,17 +165,17 @@ public func == (left: Vector, right: Vector) -> Bool {
 // MARK: Protocol Extensions
 extension Vector: Hashable {
   public var hashValue: Int {
-    return self.dx.hashValue &+ self.dy.hashValue
+    return 0
   }
 }
 extension Vector: CustomStringConvertible {
   public var description: String {
-    return "(dx: \(self.dx), dy: \(self.dy), m: \(self.magnitude))"
+    return "(θ: \(self.angle), mag: \(self.magnitude)), dx: \(self.dx), dy: \(self.dy)"
   }
 }
 
 extension Vector: CustomDebugStringConvertible {
   public var debugDescription: String {
-    return "(dx:\(self.dx), dy: \(self.dy), m: \(self.magnitude))"
+    return "(θ: \(self.angle), mag: \(self.magnitude)), dx: \(self.dx), dy: \(self.dy)"
   }
 }

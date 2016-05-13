@@ -18,6 +18,12 @@ public struct Angle {
       radians = newValue * M_PI / 180.0
     }
   }
+  public init(radians: Double = 0) {
+    self.radians = radians
+  }
+  public init(degrees: Double = 0) {
+    self.degrees = degrees
+  }
 }
 
 // MARK: - Arithmetic Operators
@@ -48,16 +54,19 @@ public func *(lhs: Numeric, rhs: Angle) -> Angle {
 // MARK: - Global Trig Functions
 
 ///  Return the cosine of a given `Angle`.
-public func cos(angle: Angle) -> Double {
+public func cos(angle: Angle) -> Numeric {
   return cos(angle.radians)
 }
 
-public func sin(angle: Angle) -> Double {
+public func sin(angle: Angle) -> Numeric {
   return sin(angle.radians)
 }
 
-public func tan(angle: Angle) -> Double {
+public func tan(angle: Angle) -> Numeric {
   return tan(angle.radians)
+}
+public func atan(x: Double) -> Angle {
+  return Angle(radians: atan(x))
 }
 
 // MARK: - String Extensions
@@ -86,52 +95,18 @@ extension Angle: FloatLiteralConvertible, IntegerLiteralConvertible {
 
 public extension Double {
   public var degrees: Angle {
-    var a = Angle()
-    a.degrees = self
-    return a
+    return Angle(degrees: self)
   }
   public var radians: Angle {
-    var a = Angle()
-    a.radians = self
-    return a
+    return Angle(radians: self)
   }
 }
 
 public extension Int {
   public var degrees: Angle {
-    var a = Angle()
-    a.degrees = Double(self)
-    return a
+    return Angle(degrees: Double(self))
   }
   public var radians: Angle {
-    var a = Angle()
-    a.radians = Double(self)
-    return a
-  }
-}
-
-// MARK: Numeric Protocol
-
-///  Helps with casting Int, Float, Double to angles and us repeating ourselves
-///  when making arithmetic operators.
-public protocol Numeric {
-  func value() -> Double
-}
-
-extension Int: Numeric {
-  public func value() -> Double {
-    return Double(self)
-  }
-}
-
-extension Float: Numeric {
-  public func value() -> Double {
-    return Double(self)
-  }
-}
-
-extension Double: Numeric {
-  public func value() -> Double {
-    return Double(self)
+    return Angle(radians: Double(self))
   }
 }

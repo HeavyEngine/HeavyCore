@@ -2,21 +2,13 @@
 
 import HeavyCore
 
-let myVector = Vector(dx: 1,dy: 1)
+var myVector = Vector(dx: 2,dy: 1)
 myVector.normalize()
-let myAltVector = myVector.invert()
+let myAltVector = Vector(angle: 45.degrees, magnitude: sqrt(2.0))
 myVector.cross(myAltVector)
 myVector.dot(myAltVector)
 
-let radians = 16.0
-
-let radVector = Vector(radians: radians)
-let degVector = Vector(degrees: radians.inDegrees)
-let oVector = Vector(radians: radians.inDegrees.inRadians)
-
-radVector == degVector && degVector == oVector
-
-myVector.angle.inDegrees
+myVector.angle.degrees
 
 // These precision errors may be an issue?
 //myVector.rotate(45.radian).angle.inDegrees
