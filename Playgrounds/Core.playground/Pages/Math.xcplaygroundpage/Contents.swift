@@ -22,8 +22,6 @@ Math.round(M_PI, toPlace: -7)
 
 M_PI.round(toPlace: -3)
 
-Math.clamp(-0.5, min: 0, max: 1)
-
 1.5.clamp(min: 0, max: 1)
 
 var percent = 0.00
