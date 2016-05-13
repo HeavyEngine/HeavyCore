@@ -30,5 +30,4 @@ for frame in 0.stride(to: 100, by: 1) {
   lerpVector.magnitude
 }
 
-
 //: [Next](@next)
