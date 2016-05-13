@@ -10,13 +10,13 @@ class MotionBehavior: Behavior {
 }
 
 class ColorBehavior: Behavior {
-  enum Colors {
+  enum Color {
     case Red
     case Blue
   }
 
   var id: Int?
-  var color: Colors = .Red
+  var color: Color = .Red
   var flip = false
   func update(delta: Double) {
     //alternate colors
