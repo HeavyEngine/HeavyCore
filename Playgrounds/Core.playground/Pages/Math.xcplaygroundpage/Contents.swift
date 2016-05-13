@@ -22,6 +22,10 @@ Math.round(M_PI, toPlace: -7)
 
 M_PI.round(toPlace: -3)
 
+let myVar: Float = 1.3
+myVar.round(
+
+
 1.5.clamp(min: 0, max: 1)
 
 var percent = 0.00
