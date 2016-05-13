@@ -4,5 +4,7 @@
         <page name='Points'/>
         <page name='Quads'/>
         <page name='Vectors'/>
+        <page name='Entities'/>
+        <page name='Units'/>
     </pages>
 </playground>

@@ -47,9 +47,17 @@ public struct Vector {
     return Vector(dx: -vector.dx, dy: -vector.dy)
   }
 
+  public func invert() -> Vector {
+    return Vector.invert(self)
+  }
+
   /// Returns a `Vector` that has been scaled by the given `Double`.
   public static func scale(vector: Vector, by scalar: Double) -> Vector {
     return Vector(dx: vector.dx * scalar, dy: vector.dy * scalar)
+  }
+
+  public func scale(scalar: Double) -> Vector {
+    return Vector.scale(self, by: scalar)
   }
 
   /// Returns the cross product of two Vectors.
@@ -57,9 +65,17 @@ public struct Vector {
     return left.dx * right.dy - left.dy * right.dx
   }
 
+  public func cross(vector: Vector) -> Double {
+    return Vector.cross(self, vector)
+  }
+
   /// Returns the dot product of two Vectors.
   public static func dot(left: Vector, _ right: Vector) -> Double {
     return left.dx * right.dx + left.dy * right.dy
+  }
+
+  public func dot(vector: Vector) -> Double {
+    return Vector.dot(self, vector)
   }
 
   /// Returns the normalized version of the given vector.
@@ -71,12 +87,21 @@ public struct Vector {
     return vector / sqrt(lengthSquared)
   }
 
-  /// Returns a `Vector` that represents the given `Vector` rotated by `theta` radians.
+  public func normalize() -> Vector {
+    return Vector.normalize(self)
+  }
+
+  ///  Returns a `Vector` that represents the given `Vector` rotated by `theta` radians.
+  ///
+  ///  - parameter vector: The `Vector` to be rotated.
+  ///  - parameter theta:  How far to rotate the vector.
+  ///
   public static func rotate(vector: Vector, by theta: Radians) -> Vector {
     return Vector(dx: vector.dx * cos(theta) - vector.dy * sin(theta),
                   dy: vector.dx * sin(theta) + vector.dy * cos(theta)
     )
   }
+
   public func rotate(by theta: Radians) -> Vector {
     return Vector.rotate(self, by: theta)
   }
@@ -86,35 +111,10 @@ public struct Vector {
     return start + time * (end - start)
   }
 
-  // MARK: Chainable Manipulation Functions
-
-  public func invert() -> Vector {
-    return Vector.invert(self)
-  }
-
-  public func scale(scalar: Double) -> Vector {
-    return Vector.scale(self, by: scalar)
-  }
-
-  public func cross(vector: Vector) -> Double {
-    return Vector.cross(self, vector)
-  }
-
-  public func dot(vector: Vector) -> Double {
-    return Vector.dot(self, vector)
-  }
-
-  public func normalize() -> Vector {
-    return Vector.normalize(self)
-  }
-
-  public func rotate(theta: Radians) -> Vector {
-    return Vector.rotate(self, by: theta)
-  }
-
   public func lerp(to vector: Vector, by time: Double) -> Vector {
     return Vector.lerp(self, end: vector, time: time)
   }
+
 }
 
 // MARK: Arithmetic Operators
