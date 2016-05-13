@@ -5,8 +5,9 @@ import HeavyCore
 let a = 0.11023123
 let b = 0.11025123
 
-Math.fuzzyEqual(a, b: b)
-Math.fuzzyEqual(a, b: b, epsilon: 0.0002)
+a.isAboutEqual(to: b)
+
+Math.aboutEqual(a, b: b, epsilon: 0.0002)
 
 let values = [1.0,2.0]
 Math.average(values)
@@ -18,6 +19,8 @@ Math.roundTo(M_PI,place: -4)
 Math.roundTo(M_PI,place: -5)
 Math.roundTo(M_PI,place: -6)
 Math.roundTo(M_PI,place: -7)
+
+M_PI.round(toPlace: -3)
 
 Math.clamp(-0.5, min: 0, max: 1)
 Math.clamp(0.5, min: 0, max: 1)

@@ -11,7 +11,7 @@ import Foundation
 public struct Math {
   /// Determine if the two numbers are within epsilon distance from each other.
   /// Based on http://floating-point-gui.de/errors/comparison/
-  public static func fuzzyEqual(a: Double, b: Double, epsilon: Double = DBL_EPSILON) -> Bool {
+  public static func aboutEqual(a: Double, b: Double, epsilon: Double = DBL_EPSILON) -> Bool {
     let absA = abs(a)
     let absB = abs(b)
     let diff = abs(a - b)
@@ -37,7 +37,7 @@ public struct Math {
   /// - parameter value: The initial value.
   /// - parameter place: The decimal place you wish to round to.
   /// - parameter base: The base to round in, 10 is the default for decimals.
-  public static func roundTo(value: Double, place: Int = 0, base: Int = 10) -> Double {
+  public static func round(value: Double, toPlace place: Int = 0, base: Int = 10) -> Double {
     let p = pow(Double(base), -1.0 * Double(place))
     return round(value * p) / p
   }
@@ -54,5 +54,16 @@ public struct Math {
 
   public static func lerp(start: Double, end: Double, weight: Double) -> Double {
     return (1.0 - weight) * start + weight * end
+  }
+}
+
+public extension Double {
+
+  func isAboutEqual(to b: Double, within epsilon: Double = DBL_EPSILON) -> Bool {
+    return Math.aboutEqual(self, b: b, epsilon: epsilon)
+  }
+
+  func round(toPlace place: Int, base: Int = 10) -> Double {
+    return Math.round(self, toPlace: place, base: base)
   }
 }
