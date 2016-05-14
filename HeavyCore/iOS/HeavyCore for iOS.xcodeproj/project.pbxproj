@@ -83,17 +83,10 @@
 		FC3F30991CD99D5F0014ECD5 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				FC3F309D1CD99DC20014ECD5 /* Behavior.swift */,
 				FC3F309E1CD99DC20014ECD5 /* Entity.swift */,
 			);
 			name = Entities;
-			sourceTree = "<group>";
-		};
-		FC49A4901CE3E20C003B52DF /* Behaviors */ = {
-			isa = PBXGroup;
-			children = (
-				FC3F309D1CD99DC20014ECD5 /* Behavior.swift */,
-			);
-			name = Behaviors;
 			sourceTree = "<group>";
 		};
 		FC6C7FDC1CD96200001E2F90 /* Geometry */ = {
@@ -151,7 +144,6 @@
 		FCA7CF511CD1643400AC174C /* HeavyCore */ = {
 			isa = PBXGroup;
 			children = (
-				FC49A4901CE3E20C003B52DF /* Behaviors */,
 				FC3F30991CD99D5F0014ECD5 /* Entities */,
 				FC6C7FDC1CD96200001E2F90 /* Geometry */,
 				FC6C7FE21CD96200001E2F90 /* Utilities */,

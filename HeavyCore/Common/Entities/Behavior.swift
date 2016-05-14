@@ -5,9 +5,9 @@
 //  Created by Dylan Wreggelsworth on 5/2/16.
 //  Copyright © 2016 Heavy. All rights reserved.
 //
-public typealias Update = (delta: Double) -> ()
 
+///  A class that defines the behavior of an `Entity` that
+///  usually changes when `update` run given a time delta.
 public protocol Behavior: class {
-  var id: Int? { get set }
   func update(delta: Double)
 }
