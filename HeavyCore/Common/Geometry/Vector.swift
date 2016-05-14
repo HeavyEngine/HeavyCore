@@ -71,6 +71,10 @@ public struct Vector {
     return Vector.dot(self, vector)
   }
 
+  public mutating func normalize() {
+    magnitude = 1
+  }
+
   /// Returns the normalized version of the given vector.
   public static func normalized(vector: Vector) -> Vector {
     return Vector(angle: vector.angle)
@@ -78,10 +82,6 @@ public struct Vector {
 
   public func normalized() -> Vector {
     return Vector.normalized(self)
-  }
-
-  public mutating func normalize() {
-    magnitude = 1
   }
 
   ///  Returns a `Vector` that represents the given `Vector` rotated by `theta` radians.

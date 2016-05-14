@@ -5,9 +5,9 @@
 //  Created by Dylan Wreggelsworth on 5/13/16.
 //  Copyright © 2016 Heavy. All rights reserved.
 //
-
 import Foundation
 
+///  A structure that allows angles to be treated as such and not a value that represents a degree or a radian. It's either as needed.
 public struct Angle {
   public var radians: Double = 0
   public var degrees: Double {
@@ -65,6 +65,7 @@ public func sin(angle: Angle) -> Numeric {
 public func tan(angle: Angle) -> Numeric {
   return tan(angle.radians)
 }
+
 public func atan(x: Double) -> Angle {
   return Angle(radians: atan(x))
 }
