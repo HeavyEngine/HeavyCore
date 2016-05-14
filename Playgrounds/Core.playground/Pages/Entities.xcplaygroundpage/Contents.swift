@@ -2,7 +2,7 @@
 import HeavyCore
 
 class MotionBehavior: Behavior {
-  var id:Int?
+  var parent: Entity?
   var position = Point()
   func update(delta: Double) {
     position.x += 0.1 * delta
@@ -10,12 +10,11 @@ class MotionBehavior: Behavior {
 }
 
 class ColorBehavior: Behavior {
+  var parent: Entity?
   enum Color {
     case Red
     case Blue
   }
-
-  var id: Int?
   var color: Color = .Red
   var flip = false
   func update(delta: Double) {

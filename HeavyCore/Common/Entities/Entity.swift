@@ -26,6 +26,7 @@ public struct Entity {
   ///
   ///  - parameter behavior: A behavior to be processed on update.
   public mutating func add(behavior: Behavior) {
+    behavior.parent = self
     behaviors.append(behavior)
   }
 
