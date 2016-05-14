@@ -48,6 +48,7 @@ public struct Vector {
   public func invert() -> Vector {
     return Vector.invert(self)
   }
+
   public mutating func scale(by multiplier: Numeric) {
     self.magnitude = self.magnitude * multiplier
   }
