@@ -5,10 +5,10 @@ import HeavyCore
 var myVector = Vector(dx: 2,dy: 1)
 myVector.normalize()
 let myAltVector = Vector(angle: 45.degrees, magnitude: sqrt(2.0))
-myVector.cross(myAltVector)
 myVector.dot(myAltVector)
-
-myVector.angle.degrees
+myAltVector.normalized()
+myAltVector.rotate(by: 45) // <-- hmmmmm 2623.31deg?
+myAltVector.rotate(by: 45.degrees)
 
 // These precision errors may be an issue?
 //myVector.rotate(45.radian).angle.inDegrees

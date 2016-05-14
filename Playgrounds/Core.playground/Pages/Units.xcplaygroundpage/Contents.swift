@@ -12,6 +12,7 @@ myAngle.radians
 cos(myAngle)
 tan(myAngle)
 sin(myAngle)
+M_PI.radians
 
 myAngle + myAngle - myAngle
 myAngle * 2
