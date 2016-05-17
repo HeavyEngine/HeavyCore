@@ -56,14 +56,14 @@ public struct Math {
   /// Determine if a number {a} is no more than a specific distance above a number {b}
   public static func closeUnderLimit(a: Double, b: Double, delta: Double = 0) -> Bool {
 
-    return a <= (b + delta);
+    return a <= (b + delta)
     
   }
   
   /// Determine if a number {a} is no less than a specific distance below a number {b}
   public static func closeOverLimit(a: Double, b: Double, delta: Double = 0) -> Bool {
    
-    return a >= (b - delta);
+    return a >= (b - delta)
     
   }
   
