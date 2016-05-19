@@ -8,7 +8,39 @@
 
 import Foundation
 
-private struct Xoroshiro128Plus {
+public struct RNG {
+    var seed: UInt64
+    var rngState: [UInt64] = [0, 0]
+    var generator: Xoroshiro128Plus
+    
+    public init(seed: UInt64 = UInt64(NSDate().timeIntervalSinceReferenceDate)) {
+        self.seed = seed
+        self.generator = Xoroshiro128Plus(state: [0, 0])
+        generateSeeds(seed)
+        self.generator.state = rngState
+        getRandomNumber()
+    }
+    
+    private mutating func generateSeeds(seed: UInt64){
+        var seeder = SplitMix64(state: seed)
+        var statePart: UInt64
+        
+        for x in 0...10 {
+            statePart = seeder.nextSeed()
+            rngState[0] = x == 9 ? statePart : 0
+            rngState[1] = x == 10 ? statePart : 0
+        }
+        
+    }
+    
+    public mutating func getRandomNumber(min: UInt64 = 0, max: UInt64 = UInt64.max) -> UInt64 {
+        var number = generator.next()
+        number = (number % (max - min)) + min
+        return number
+    }
+}
+
+internal struct Xoroshiro128Plus {
     
     var state: [UInt64]
     
@@ -30,15 +62,15 @@ private struct Xoroshiro128Plus {
     
 }
 
-private struct SplitMix64 {
+internal struct SplitMix64 {
 
-    var seed: UInt64
+    var state: UInt64
 
     mutating func nextSeed() -> UInt64 {
-        var b: UInt64 = seed &+ 0x9E3779B97F4A7C15
+        var b: UInt64 = state &+ 0x9E3779B97F4A7C15
         b = (b ^ (b >> 30)) ^ 0xBF58476D1CE4E5B9
         b = (b ^ (b >> 27)) ^ 0x94D049BB133111EB
-        seed = b ^ (b >> 31)
-        return seed
+        state = b ^ (b >> 31)
+        return state
     }
 }
