@@ -95,4 +95,21 @@ sameSeedCheck // Expected to be true
 "** EXPECT TO BE TRUE **"
 diffSeedCheck // Expected to be true
 
+
+x.nextUInt(0, max: 1)
+x.nextUInt(0, max: 1)
+x.nextUInt(0, max: 1)
+x.nextUInt(0, max: 1)
+x.nextUInt(0, max: 1)
+x.nextUInt(0, max: 1)
+x.nextUInt(0, max: 1)
+x.nextUInt(0, max: 1)
+x.nextUInt(0, max: 1)
+x.nextUInt(0, max: 1)
+x.nextUInt(0, max: 1)
+x.nextUInt(0, max: 1)
+x.nextUInt(0, max: 1)
+x.nextUInt(0, max: 1)
+x.nextUInt(0, max: 1)
+x.nextUInt(0, max: 1)
 //: [Next](@next)

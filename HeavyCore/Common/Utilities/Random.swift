@@ -23,7 +23,7 @@ public struct PRNG {
         mutating func next() -> UInt {
             let s0: UInt = state[0]
             var s1 = state[1]
-            let result = s0 &* s1
+            let result = s0 &+ s1
             
             s1 ^= s0
             state[0] = rotateLeft(s0, b: 55) ^ s1 ^ (s1 << 14)
