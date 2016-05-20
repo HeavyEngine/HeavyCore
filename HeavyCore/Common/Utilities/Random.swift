@@ -8,20 +8,12 @@
 
 import Foundation
 
-/**
- *  Main Pseudo-Random Number Generator
- */
+///  Main Pseudo-Random Number Generator
 public struct RNG {
     var seed: UInt64
     var rngState: [UInt64] = [0, 0]
     var generator: Xoroshiro128Plus
     
-    /**
-     Initializer for RNG object
-     
-     - parameter seed: (OPTIONAL) UInt64 provided by user for seeded RNG, or uses system time for unseeded RNG
-     
-     */
     public init(seed: UInt64 = UInt64(NSDate().timeIntervalSinceReferenceDate)) {
         self.seed = seed
         self.generator = Xoroshiro128Plus(state: [0, 0])
@@ -30,11 +22,6 @@ public struct RNG {
         getRandomNumber()
     }
     
-    /**
-     Generates seed values for Xoroshiros128+ algorithm
-     
-     - parameter seed: UInt64 provided by user or system time if not provided
-     */
     private mutating func generateSeeds(seed: UInt64){
         var seeder = SplitMix64(state: seed)
         var statePart: UInt64
@@ -46,14 +33,10 @@ public struct RNG {
         }
     }
     
-    /**
-     Retrieves a random number with an optional range
-     
-     - parameter min: (OPTIONAL) defines minimum value for a range that return value should be within
-     - parameter max: (OPTIONAL) defines maximum value for a range that return value should be within
-     
-     - returns: returns the next random UInt64 in the sequence
-     */
+    ///  Retrieves a random number with an optional range
+    ///  - parameter min: (OPTIONAL) defines minimum value for a range that return value should be within
+    ///  - parameter max: (OPTIONAL) defines maximum value for a range that return value should be within
+    ///  - returns: returns the next random UInt64 in the sequence
     public mutating func getRandomNumber(min: UInt64 = 0, max: UInt64 = UInt64.max) -> UInt64 {
         var number = generator.next()
         number = (number % (max - min)) + min
@@ -61,9 +44,7 @@ public struct RNG {
     }
 }
 
-/**
- *  Main algorithm for generating pseudo-random numbers
- */
+///  Main algorithm for generating pseudo-random numbers
 internal struct Xoroshiro128Plus {
     
     var state: [UInt64]
@@ -86,9 +67,7 @@ internal struct Xoroshiro128Plus {
     
 }
 
-/**
- *  Returns seed values to be used in Xoroshiro128Plus algorithm
- */
+///  Creates seed values to be used in Xoroshiro128Plus algorithm
 internal struct SplitMix64 {
 
     var state: UInt64
