@@ -18,10 +18,17 @@ let end = myTimer.time //End time
 
 
 var fpsTimer = Timer()
+var prng = PRNG()
+var loopStart = fpsTimer.time
+
 for frame in 0.stride(to: 5000, by: 1) {
+//  prng.nextUInt()
   fpsTimer.update()
   fpsTimer.deltaTime
 }
+var loopEnd = fpsTimer.time
+
+(loopEnd-loopStart)
 
 fpsTimer.fps
 fpsTimer.averageDelta
