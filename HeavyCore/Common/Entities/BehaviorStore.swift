@@ -15,13 +15,6 @@ public struct BehaviorStore {
 
   public init() {}
 
-  public func find<T: Behavior>(type: T.Type) -> [T]? {
-    guard let id = has(type),
-          let store = storage[id]
-    else { return nil }
-    return store.flatMap { $0 as? T }
-  }
-
   private func has(type: Behavior.Type) -> BehaviorID? {
     guard let id = hasID(type) where hasStored(id) else { return nil }
     return id
@@ -37,15 +30,20 @@ public struct BehaviorStore {
     return !results.isEmpty
   }
 
+  public func find<T: Behavior>(type: T.Type) -> [T]? {
+    guard let id = has(type),
+      let store = storage[id]
+      else { return nil }
+    return store.flatMap { $0 as? T }
+  }
+
   public mutating func add<T: Behavior>(behavior: T) {
     let type  = behavior.dynamicType
     let doesHaveID = hasID(type)
     let id = doesHaveID ?? storageIDs.count
-
     if doesHaveID == nil {
       storageIDs.append(type)
     }
-
     if storage[id] == nil {
       storage[id] = [T]()
     }
