@@ -8,7 +8,7 @@
 
 public struct Entity {
   var id: String = NSUUID().UUIDString
-  public var behaviors = [Behavior]()
+  public var behaviors = BehaviorStore()
 
   public init() {}
 
@@ -16,10 +16,7 @@ public struct Entity {
   ///
   ///  - parameter behavior: The `Behavior` that is to be removed.
   public mutating func remove(behavior: Behavior) {
-    guard let index = behaviors.indexOf({ $0 === behavior }) else {
-      return
-    }
-    behaviors.removeAtIndex(index)
+    behaviors.remove(behavior)
   }
 
   ///  Add a behavior to this entity to be processed on update.
@@ -27,7 +24,7 @@ public struct Entity {
   ///  - parameter behavior: A behavior to be processed on update.
   public mutating func add(behavior: Behavior) {
     behavior.parent = self
-    behaviors.append(behavior)
+    behaviors.add(behavior)
   }
 
   ///  Gets run on scene update and passes the delta time to
@@ -45,10 +42,14 @@ public struct Entity {
   ///  - parameter type: The type of behavior that it should look for.
   ///
   ///  - returns: An `Array` of `Behavior` that match the type given.
-  public func find<T: Behavior>(type: T.Type) -> [Behavior] {
-    return behaviors.filter { (element: Behavior) -> Bool in
-      return element.dynamicType == type
+  public func find<T: Behavior>(behavior: T.Type) -> [Behavior]? {
+    guard let results = behaviors.find(behavior) else {
+      return nil
     }
+    return results
   }
 
+  public func has<T: Behavior>(behavior: T.Type) -> Bool {
+    return find(behavior) != nil ? true : false
+  }
 }
