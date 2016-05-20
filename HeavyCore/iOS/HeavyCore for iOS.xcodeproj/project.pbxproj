@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C285CAAB1CED615400B1390B /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = C285CAAA1CED615400B1390B /* Random.swift */; };
 		FC3F309F1CD99DC20014ECD5 /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F309D1CD99DC20014ECD5 /* Behavior.swift */; };
 		FC3F30A11CD99DC20014ECD5 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F309E1CD99DC20014ECD5 /* Entity.swift */; };
 		FC6C7FF41CD962E4001E2F90 /* HeavyCore.h in Headers */ = {isa = PBXBuildFile; fileRef = FC6C7FF31CD962E4001E2F90 /* HeavyCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C285CAAA1CED615400B1390B /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		FC3F309D1CD99DC20014ECD5 /* Behavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Behavior.swift; path = ../../Common/Entities/Behavior.swift; sourceTree = "<group>"; };
 		FC3F309E1CD99DC20014ECD5 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Entity.swift; path = ../../Common/Entities/Entity.swift; sourceTree = "<group>"; };
 		FC6C7FDD1CD96200001E2F90 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			children = (
 				FCA4E4DD1CE685AC00362AD9 /* Math.swift */,
 				FCA4E4F11CE6CF9000362AD9 /* Numeric.swift */,
+				C285CAAA1CED615400B1390B /* Random.swift */,
 			);
 			name = Math;
 			sourceTree = "<group>";
@@ -146,7 +149,9 @@
 				FC6C7FFE1CD962E5001E2F90 /* HeavyCoreTests */,
 				FCA7CF501CD1643400AC174C /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		FCA7CF501CD1643400AC174C /* Products */ = {
 			isa = PBXGroup;
@@ -285,6 +290,7 @@
 				FC6C80091CD963ED001E2F90 /* Point.swift in Sources */,
 				FCA4E4E11CE685AC00362AD9 /* Timer.swift in Sources */,
 				FCA4E4EA1CE68B4600362AD9 /* Geometry.swift in Sources */,
+				C285CAAB1CED615400B1390B /* Random.swift in Sources */,
 				FCA4E4EC1CE68B4F00362AD9 /* Quad.swift in Sources */,
 				FCA4E4E61CE68B3600362AD9 /* Vector.swift in Sources */,
 				FCA4E4DF1CE685AC00362AD9 /* Math.swift in Sources */,

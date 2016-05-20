@@ -30,4 +30,14 @@ for value in 0.stride(to: 20, by: 1) {
   Math.lerp(0, end: 20, weight: percent)
 }
 
+Math.closeOverLimit(13.9283, b: 15, delta: 1.1) //expected true
+Math.closeOverLimit(12.9, b: 15, delta: 2) //expected false
+Math.closeOverLimit(13, b: 15) // expected false
+Math.closeOverLimit(17, b: 15) // expected true
+
+Math.closeUnderLimit(13, b: 15, delta: 2) //expected true
+Math.closeUnderLimit(16, b: 15) //expected false
+Math.closeUnderLimit(18, b: 15, delta: 3) //expected true
+Math.closeUnderLimit(18, b: 15, delta: 2) //expected false
+
 //: [Next](@next)
