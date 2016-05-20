@@ -30,7 +30,6 @@ public struct RNG {
             rngState[0] = x == 9 ? statePart : 0
             rngState[1] = x == 10 ? statePart : 0
         }
-        
     }
     
     public mutating func getRandomNumber(min: UInt64 = 0, max: UInt64 = UInt64.max) -> UInt64 {
