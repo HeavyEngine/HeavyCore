@@ -6,8 +6,6 @@
 //  Copyright © 2016 Heavy. All rights reserved.
 //
 
-import Foundation
-
 public struct BehaviorStore {
   typealias BehaviorID   = Int
   typealias Behaviors    = [Behavior]
@@ -17,40 +15,46 @@ public struct BehaviorStore {
 
   public init() {}
 
-  public func find<T: Behavior>(type: T.Type) -> [Behavior]? {
-    guard let id = has(type) else {
-      return nil
-    }
-    return storage[id]
+  public func find<T: Behavior>(type: T.Type) -> [T]? {
+    guard let id = has(type),
+          let store = storage[id]
+    else { return nil }
+    return store.flatMap { $0 as? T }
   }
 
   private func has(type: Behavior.Type) -> BehaviorID? {
-    guard let id    = storageIDs.indexOf({$0 == type}),
-          let count = storage[id]?.count
-    else { return nil}
-    print(count)
-    return  count > 0 ? id : nil
+    guard let id = hasID(type) where hasStored(id) else { return nil }
+    return id
   }
 
-  public mutating func add(behavior: Behavior) {
-    let type  = behavior.dynamicType
-    let hasID = has(type)
-    let id    = hasID ?? storageIDs.count
+  private func hasID(type: Behavior.Type) -> BehaviorID? {
+    guard let id = storageIDs.indexOf({$0 == type}) else { return nil }
+    return id
+  }
 
-    if hasID == nil {
+  private func hasStored(id: BehaviorID) -> Bool {
+    guard let results = storage[id] else { return false }
+    return !results.isEmpty
+  }
+
+  public mutating func add<T: Behavior>(behavior: T) {
+    let type  = behavior.dynamicType
+    let doesHaveID = hasID(type)
+    let id = doesHaveID ?? storageIDs.count
+
+    if doesHaveID == nil {
       storageIDs.append(type)
     }
 
     if storage[id] == nil {
-      storage[id] = [Behavior]()
+      storage[id] = [T]()
     }
-
     storage[id]?.append(behavior)
   }
 
   public mutating func remove(behavior: Behavior) {
     guard let id = has(behavior.dynamicType)
-          where storage[id] != nil
+          where storage[id]?.count > 0
     else {
       return
     }

@@ -31,26 +31,25 @@ var myEntity = Entity()
 let colorB = ColorBehavior()
 myEntity.add(colorB)
 myEntity.add(MotionBehavior())
+myEntity.add(MotionBehavior())
 myEntity.remove(colorB)
 myEntity.has(MotionBehavior)
 myEntity.has(ColorBehavior)
 myEntity.add(colorB)
 myEntity.add(ColorBehavior())
-
+myEntity.add(ColorBehavior())
 
 // Simulate a game loop...
 for time in 0.stride(to: 1, by: 1.0/15) {
   myEntity.update(time)
-//  myEntity.find(MotionBehavior) as? [MotionBehavior]
-  myEntity.find(ColorBehavior) as? [ColorBehavior]
-  guard let movers = myEntity.find(MotionBehavior) as? [MotionBehavior],
-        let colors = myEntity.find(ColorBehavior) as? [ColorBehavior]
+  guard let movers = myEntity.find(MotionBehavior),
+        let colors = myEntity.find(ColorBehavior)
   else { continue }
-  for move in movers {
-    print(move.position)
-  }
   for color in colors {
     print(color.color)
+  }
+  for mover in movers {
+    print(mover.position)
   }
 }
 

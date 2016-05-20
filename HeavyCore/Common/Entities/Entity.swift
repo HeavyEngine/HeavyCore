@@ -22,7 +22,7 @@ public struct Entity {
   ///  Add a behavior to this entity to be processed on update.
   ///
   ///  - parameter behavior: A behavior to be processed on update.
-  public mutating func add(behavior: Behavior) {
+  public mutating func add<T: Behavior>(behavior: T) {
     behavior.parent = self
     behaviors.add(behavior)
   }
@@ -42,7 +42,7 @@ public struct Entity {
   ///  - parameter type: The type of behavior that it should look for.
   ///
   ///  - returns: An `Array` of `Behavior` that match the type given.
-  public func find<T: Behavior>(behavior: T.Type) -> [Behavior]? {
+  public func find<T: Behavior>(behavior: T.Type) -> [T]? {
     guard let results = behaviors.find(behavior) else {
       return nil
     }
