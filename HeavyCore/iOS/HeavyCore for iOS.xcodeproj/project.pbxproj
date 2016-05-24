@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C285CAAB1CED615400B1390B /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = C285CAAA1CED615400B1390B /* Random.swift */; };
+		FC1F90B21CF4E7BF0049C4D2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1F90B11CF4E7BF0049C4D2 /* Nimble.framework */; };
+		FC1F90B41CF4E7C60049C4D2 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1F90B31CF4E7C60049C4D2 /* Quick.framework */; };
 		FC3F309F1CD99DC20014ECD5 /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F309D1CD99DC20014ECD5 /* Behavior.swift */; };
 		FC3F30A11CD99DC20014ECD5 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F309E1CD99DC20014ECD5 /* Entity.swift */; };
 		FC6C7FF41CD962E4001E2F90 /* HeavyCore.h in Headers */ = {isa = PBXBuildFile; fileRef = FC6C7FF31CD962E4001E2F90 /* HeavyCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -49,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		C285CAAA1CED615400B1390B /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
+		FC1F90B11CF4E7BF0049C4D2 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "../../Carthage/Checkouts/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
+		FC1F90B31CF4E7C60049C4D2 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "../../Carthage/Checkouts/Quick/build/Debug-iphoneos/Quick.framework"; sourceTree = "<group>"; };
 		FC3F309D1CD99DC20014ECD5 /* Behavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Behavior.swift; path = ../../Common/Entities/Behavior.swift; sourceTree = "<group>"; };
 		FC3F309E1CD99DC20014ECD5 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Entity.swift; path = ../../Common/Entities/Entity.swift; sourceTree = "<group>"; };
 		FC6C7FDD1CD96200001E2F90 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC1F90B41CF4E7C60049C4D2 /* Quick.framework in Frameworks */,
+				FC1F90B21CF4E7BF0049C4D2 /* Nimble.framework in Frameworks */,
 				FC6C7FFB1CD962E5001E2F90 /* HeavyCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +94,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC1F90B51CF4E7FA0049C4D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC1F90B31CF4E7C60049C4D2 /* Quick.framework */,
+				FC1F90B11CF4E7BF0049C4D2 /* Nimble.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FC3F30991CD99D5F0014ECD5 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +159,7 @@
 		FCA7CF451CD1643400AC174C = {
 			isa = PBXGroup;
 			children = (
+				FC1F90B51CF4E7FA0049C4D2 /* Frameworks */,
 				FC6C80081CD96376001E2F90 /* Core.playground */,
 				FCA7CF511CD1643400AC174C /* HeavyCore */,
 				FC6C7FFE1CD962E5001E2F90 /* HeavyCoreTests */,

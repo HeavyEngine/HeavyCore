@@ -5,6 +5,7 @@
 //  Created by Dylan Wreggelsworth on 5/2/16.
 //  Copyright © 2016 Heavy. All rights reserved.
 //
+import Foundation
 
 public struct Entity {
   var id: String = NSUUID().UUIDString
