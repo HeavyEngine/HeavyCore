@@ -6,6 +6,8 @@
 //  Copyright © 2016 Heavy. All rights reserved.
 //
 
+///  Used for storing different behavior types so they can be retrieved easily.
+///  - Todo: Add pooling
 public struct BehaviorStore {
   typealias BehaviorID   = Int
   typealias Behaviors    = [Behavior]
@@ -16,32 +18,34 @@ public struct BehaviorStore {
   public init() {}
 
   private func has(type: Behavior.Type) -> BehaviorID? {
-    guard let id = hasID(type) where hasStored(id) else { return nil }
+    guard let id = hasIndex(type) where storage[id] != nil else { return nil }
     return id
   }
 
-  private func hasID(type: Behavior.Type) -> BehaviorID? {
+  private func hasIndex(type: Behavior.Type) -> BehaviorID? {
     guard let id = storageIDs.indexOf({$0 == type}) else { return nil }
     return id
   }
 
-  private func hasStored(id: BehaviorID) -> Bool {
-    guard let results = storage[id] else { return false }
-    return !results.isEmpty
-  }
-
+  ///  Find all of the `Behavior.Type` this particular store contains.
+  ///
+  ///  - parameter type: The `Behavior.Type` you wish to find.
+  ///
+  ///  - returns: A collection of the `Behavior.Type` you are looking for or `nil`.
   public func find<T: Behavior>(type: T.Type) -> [T]? {
-    guard let id = has(type),
-      let store = storage[id]
-      else { return nil }
+    guard let id    = has(type),
+              store = storage[id] else { return nil }
     return store.flatMap { $0 as? T }
   }
 
+  ///  Add a reference to a given `Behavior` to the store.
+  ///
+  ///  - parameter behavior: The `Behavior` reference you wish to store.
   public mutating func add<T: Behavior>(behavior: T) {
     let type  = behavior.dynamicType
-    let doesHaveID = hasID(type)
-    let id = doesHaveID ?? storageIDs.count
-    if doesHaveID == nil {
+    let index = hasIndex(type)
+    let id = index ?? storageIDs.count
+    if index == nil {
       storageIDs.append(type)
     }
     if storage[id] == nil {
@@ -50,6 +54,9 @@ public struct BehaviorStore {
     storage[id]?.append(behavior)
   }
 
+  ///  Remove this `Behavior` from the store.
+  ///
+  ///  - parameter behavior: A reference to the behavior you wish to remove.
   public mutating func remove(behavior: Behavior) {
     guard let id = has(behavior.dynamicType)
           where storage[id]?.count > 0
