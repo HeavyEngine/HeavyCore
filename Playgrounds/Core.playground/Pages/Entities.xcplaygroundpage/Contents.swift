@@ -28,19 +28,29 @@ class ColorBehavior: Behavior {
 var myEntity = Entity()
 
 // Add the behaviors to the entity...
-myEntity.add(ColorBehavior())
+let colorB = ColorBehavior()
+myEntity.add(colorB)
 myEntity.add(MotionBehavior())
+myEntity.add(MotionBehavior())
+myEntity.remove(colorB)
+myEntity.has(MotionBehavior)
+myEntity.has(ColorBehavior)
+myEntity.add(colorB)
+myEntity.add(ColorBehavior())
+myEntity.add(ColorBehavior())
 
 // Simulate a game loop...
 for time in 0.stride(to: 1, by: 1.0/15) {
   myEntity.update(time)
-  guard let pos   = myEntity.find(MotionBehavior).first as? MotionBehavior,
-            color = myEntity.find(ColorBehavior).first as? ColorBehavior
-  else {
-      continue
+  guard let movers = myEntity.find(MotionBehavior),
+        let colors = myEntity.find(ColorBehavior)
+  else { continue }
+  for color in colors {
+    print(color.color)
   }
-  pos.position
-  color.color // Should alternate
+  for mover in movers {
+    print(mover.position)
+  }
 }
 
 //: [Next](@next)

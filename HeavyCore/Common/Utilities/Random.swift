@@ -48,14 +48,14 @@ public struct PRNG {
         }
     }
     
-    var seed: UInt
+    public var seed: UInt
     private var rngState: [UInt] = [0, 0]
     private var generator: Xoroshiro128Plus
     
     ///  Initialize a PRNG based on the given seed. If a seed is not given it uses Timer.time as the seed.
     ///  - parameter seed: UInt
     ///  - returns: PRNG
-    public init(seed: UInt = UInt(Timer().time)) {
+    public init(seed: UInt = UInt(Timer().time * 100000)) {
         self.seed = seed
         self.generator = Xoroshiro128Plus(state: [0, 0])
         generateSeeds(seed)
