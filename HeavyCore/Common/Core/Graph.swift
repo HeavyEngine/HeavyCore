@@ -8,7 +8,7 @@
 
 public protocol Graph {
   var parent: Graph? { get set }
-  var children: Set<Entity> { get }
+  var children: Set<Entity>? { get }
   func addChild(entity: Entity)
   func removeChild(entity: Entity)
 }

@@ -16,8 +16,8 @@ public class Entity: Graph {
 
   private var _children = Set<Entity>()
 
-  public var children: Set<Entity> {
-    return _children
+  public var children: Set<Entity>? {
+    return _children.count > 0 ? _children : nil
   }
 
   public func addChild(entity: Entity) {
@@ -77,13 +77,13 @@ public class Entity: Graph {
 // MARK: - String Extensions
 extension Entity: CustomStringConvertible {
   public var description: String {
-    return "{id: \(id.string) behaviors: \(behaviors)}"
+    return "{id: \(id.string) behaviors: \(behaviors), children: \(children)}"
   }
 }
 
 extension Entity: CustomDebugStringConvertible {
   public var debugDescription: String {
-    return "{id: \(id.string), behaviors:\(behaviors)}"
+    return "{id: \(id.string), behaviors: \(behaviors), children: \(children)}"
   }
 }
 

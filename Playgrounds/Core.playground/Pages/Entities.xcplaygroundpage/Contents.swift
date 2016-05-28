@@ -65,8 +65,9 @@ var myScene = Scene()
 myScene.addChild(newEntity)
 myScene.addChild(anotherE)
 myScene.addChild(myEntity)
+myScene.removeChild(anotherE)
 
-myScene.children.forEach { element in
+myScene.children?.forEach { element in
   print(element)
 }
 

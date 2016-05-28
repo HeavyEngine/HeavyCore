@@ -14,8 +14,8 @@ public class Scene: Graph {
 
   public init() {}
 
-  public var children: Set<Entity> {
-    return _children
+  public var children: Set<Entity>? {
+    return _children.count > 0 ? _children : nil
   }
 
   public func addChild(entity: Entity) {
@@ -26,5 +26,18 @@ public class Scene: Graph {
   public func removeChild(entity: Entity) {
     entity.parent = nil
     _children.remove(entity)
+  }
+}
+
+// MARK: - String Extensions
+extension Scene: CustomStringConvertible {
+  public var description: String {
+    return "{totalChildren: \(children?.count), children: \(children)}"
+  }
+}
+
+extension Scene: CustomDebugStringConvertible {
+  public var debugDescription: String {
+    return "{totalChildren: \(children?.count), children: \(children)}"
   }
 }
