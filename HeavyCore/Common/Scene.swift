@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Scene {
+public class Scene {
   private var _children = Set<Entity>()
 
   public var children: Set<Entity> {
@@ -17,11 +17,11 @@ public struct Scene {
 
   public init() {}
 
-  public mutating func addChild(entity: Entity) {
+  public func addChild(entity: Entity) {
     _children.insert(entity)
   }
 
-  public mutating func removeChild(entity: Entity) {
+  public func removeChild(entity: Entity) {
     _children.remove(entity)
   }
 
