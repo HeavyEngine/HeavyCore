@@ -70,5 +70,4 @@ myScene.children.forEach { element in
   print(element)
 }
 
-
 //: [Next](@next)
