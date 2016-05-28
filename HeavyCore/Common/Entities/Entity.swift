@@ -7,7 +7,7 @@
 //
 import Foundation
 
-public struct Entity {
+public class Entity {
   var id = UUID()
   public var behaviors = BehaviorStore()
 
@@ -16,14 +16,14 @@ public struct Entity {
   ///  Used to remove a given `Behavior` from an `Entity`.
   ///
   ///  - parameter behavior: The `Behavior` that is to be removed.
-  public mutating func remove(behavior: Behavior) {
+  public func remove(behavior: Behavior) {
     behaviors.remove(behavior)
   }
 
   ///  Add a behavior to this entity to be processed on update.
   ///
   ///  - parameter behavior: A behavior to be processed on update.
-  public mutating func add<T: Behavior>(behavior: T) {
+  public func add<T: Behavior>(behavior: T) {
     behavior.parent = self
     behaviors.add(behavior)
   }
@@ -32,7 +32,7 @@ public struct Entity {
   ///  any behaviors this entity has.
   ///
   ///  - parameter delta: The time difference between now and the last update.
-  public mutating func update(delta: Double) {
+  public func update(delta: Double) {
     for behavior in behaviors {
       behavior.update(delta)
     }
@@ -76,5 +76,5 @@ extension Entity: Hashable {
 }
 
 public func ==(left: Entity, right: Entity) -> Bool {
-  return left.id == right.id && left.behaviors == right.behaviors
+  return left === right
 }
