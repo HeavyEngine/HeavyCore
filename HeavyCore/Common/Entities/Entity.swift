@@ -55,6 +55,19 @@ public struct Entity {
   }
 }
 
+// MARK: - String Extensions
+extension Entity: CustomStringConvertible {
+  public var description: String {
+    return "{id: \(id.string) behaviors: \(behaviors)}"
+  }
+}
+
+extension Entity: CustomDebugStringConvertible {
+  public var debugDescription: String {
+    return "{id: \(id.string), behaviors:\(behaviors)}"
+  }
+}
+
 extension Entity: Hashable {
   public var hashValue: Int {
     return id.string.hashValue

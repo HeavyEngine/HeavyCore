@@ -73,6 +73,19 @@ public struct BehaviorStore {
   }
 }
 
+// MARK: - String Extensions
+extension BehaviorStore: CustomStringConvertible {
+  public var description: String {
+    return "{total: \(values.count), values: \(values)}"
+  }
+}
+
+extension BehaviorStore: CustomDebugStringConvertible {
+  public var debugDescription: String {
+    return "{total: \(values.count), values: \(values)}"
+  }
+}
+
 public struct BehaviorStoreGenerator: GeneratorType {
   var store: BehaviorStore
   var index = 0
