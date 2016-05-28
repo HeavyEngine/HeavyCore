@@ -61,5 +61,14 @@ newEntity == anotherE
 newEntity
 anotherE
 
+var myScene = Scene()
+myScene.addChild(newEntity)
+myScene.addChild(anotherE)
+myScene.addChild(myEntity)
+
+myScene.children.forEach { element in
+  print(element)
+}
+
 
 //: [Next](@next)
