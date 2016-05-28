@@ -37,6 +37,10 @@
 		FCA4E4EF1CE68B5B00362AD9 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4E4DE1CE685AC00362AD9 /* Timer.swift */; };
 		FCA4E4F21CE6CF9000362AD9 /* Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4E4F11CE6CF9000362AD9 /* Numeric.swift */; };
 		FCA4E4F31CE6CFC500362AD9 /* Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4E4F11CE6CF9000362AD9 /* Numeric.swift */; };
+		FCDB9B091CFA39CB00F153A0 /* CFUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDB9B081CFA39CB00F153A0 /* CFUUID.swift */; };
+		FCDB9B0A1CFA39CB00F153A0 /* CFUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDB9B081CFA39CB00F153A0 /* CFUUID.swift */; };
+		FCDB9B0D1CFA3B7A00F153A0 /* UUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDB9B0C1CFA3B7A00F153A0 /* UUID.swift */; };
+		FCDB9B0E1CFA3B7A00F153A0 /* UUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDB9B0C1CFA3B7A00F153A0 /* UUID.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,8 @@
 		FCA4E4DE1CE685AC00362AD9 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		FCA4E4E31CE6860600362AD9 /* Angle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
 		FCA4E4F11CE6CF9000362AD9 /* Numeric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Numeric.swift; sourceTree = "<group>"; };
+		FCDB9B081CFA39CB00F153A0 /* CFUUID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFUUID.swift; sourceTree = "<group>"; };
+		FCDB9B0C1CFA3B7A00F153A0 /* UUID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUID.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,8 @@
 			children = (
 				FCA4E4F01CE6CF7700362AD9 /* Math */,
 				FCA4E4DE1CE685AC00362AD9 /* Timer.swift */,
+				FCDB9B0B1CFA39D000F153A0 /* Extensions */,
+				FCDB9B0C1CFA3B7A00F153A0 /* UUID.swift */,
 			);
 			name = Utilities;
 			path = ../../Common/Utilities;
@@ -159,8 +167,8 @@
 		FCA7CF451CD1643400AC174C = {
 			isa = PBXGroup;
 			children = (
-				FC1F90B51CF4E7FA0049C4D2 /* Frameworks */,
 				FC6C80081CD96376001E2F90 /* Core.playground */,
+				FC1F90B51CF4E7FA0049C4D2 /* Frameworks */,
 				FCA7CF511CD1643400AC174C /* HeavyCore */,
 				FC6C7FFE1CD962E5001E2F90 /* HeavyCoreTests */,
 				FCA7CF501CD1643400AC174C /* Products */,
@@ -187,6 +195,14 @@
 				FC6C7FF31CD962E4001E2F90 /* HeavyCore.h */,
 			);
 			path = HeavyCore;
+			sourceTree = "<group>";
+		};
+		FCDB9B0B1CFA39D000F153A0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FCDB9B081CFA39CB00F153A0 /* CFUUID.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +318,8 @@
 				FCA4E4E91CE68B4300362AD9 /* Angle.swift in Sources */,
 				FC7C90011CECFF1900ADE499 /* BehaviorStore.swift in Sources */,
 				FCA4E4F21CE6CF9000362AD9 /* Numeric.swift in Sources */,
+				FCDB9B091CFA39CB00F153A0 /* CFUUID.swift in Sources */,
+				FCDB9B0D1CFA3B7A00F153A0 /* UUID.swift in Sources */,
 				FCA4E4ED1CE68B5300362AD9 /* Units.swift in Sources */,
 				FC6C80091CD963ED001E2F90 /* Point.swift in Sources */,
 				FCA4E4E11CE685AC00362AD9 /* Timer.swift in Sources */,
@@ -322,6 +340,8 @@
 				FC6C800F1CD963EE001E2F90 /* Geometry.swift in Sources */,
 				FCA4E4E71CE68B3B00362AD9 /* Entity.swift in Sources */,
 				FCA4E4E51CE6860600362AD9 /* Angle.swift in Sources */,
+				FCDB9B0A1CFA39CB00F153A0 /* CFUUID.swift in Sources */,
+				FCDB9B0E1CFA3B7A00F153A0 /* UUID.swift in Sources */,
 				FCA4E4EB1CE68B4A00362AD9 /* Point.swift in Sources */,
 				FC6C80111CD963EE001E2F90 /* Units.swift in Sources */,
 				FCA4E4F31CE6CFC500362AD9 /* Numeric.swift in Sources */,

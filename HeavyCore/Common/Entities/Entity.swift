@@ -8,7 +8,7 @@
 import Foundation
 
 public struct Entity {
-  var id: String = NSUUID().UUIDString
+  var id = UUID()
   public var behaviors = BehaviorStore()
 
   public init() {}
