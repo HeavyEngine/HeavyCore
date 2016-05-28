@@ -8,12 +8,6 @@
 
 import Foundation
 
-extension CFUUID {
-  init() {
-    return CFUUIDCreate(nil)
-  }
-}
-
 public func ==(left: CFUUID, right: CFUUID) -> Bool {
   return CFEqual(left, right)
 }

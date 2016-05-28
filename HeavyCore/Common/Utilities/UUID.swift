@@ -11,8 +11,8 @@ import Foundation
 public struct UUID {
   public let cfuuid = CFUUIDCreate(nil)
 
-  public let string: String {
-    return CFUUIDCreateString(nil, cfuuid)
+  public var string: String {
+    return CFUUIDCreateString(nil, cfuuid) as String
   }
 
   public init() {}

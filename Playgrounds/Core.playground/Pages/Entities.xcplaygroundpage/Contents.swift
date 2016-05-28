@@ -53,4 +53,13 @@ for time in 0.stride(to: 1, by: 1.0/15) {
   }
 }
 
+var newEntity = Entity()
+var anotherE = newEntity
+myEntity == newEntity
+
+newEntity == anotherE
+newEntity
+anotherE
+
+
 //: [Next](@next)

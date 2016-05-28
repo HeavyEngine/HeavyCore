@@ -14,6 +14,9 @@ public struct BehaviorStore {
 
   private var storageIDs = [Behavior.Type]()
   private var storage    = [BehaviorID: [Behavior]]()
+  public var values: Array<Behavior> {
+    return self.flatMap({return $0})
+  }
 
   public init() {}
 
@@ -95,4 +98,8 @@ extension BehaviorStore: SequenceType {
   public func generate() -> BehaviorStoreGenerator {
     return BehaviorStoreGenerator(store: self)
   }
+}
+
+public func ==(left: BehaviorStore, right: BehaviorStore) -> Bool {
+  return left.elementsEqual(right, isEquivalent: {$0 === $1})
 }

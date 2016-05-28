@@ -54,3 +54,14 @@ public struct Entity {
     return find(behavior) != nil ? true : false
   }
 }
+
+extension Entity: Hashable {
+  public var hashValue: Int {
+    return id.string.hashValue
+
+  }
+}
+
+public func ==(left: Entity, right: Entity) -> Bool {
+  return left.id == right.id && left.behaviors == right.behaviors
+}
