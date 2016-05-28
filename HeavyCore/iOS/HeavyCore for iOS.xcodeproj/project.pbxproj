@@ -118,10 +118,9 @@
 		FC3F30991CD99D5F0014ECD5 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				FCFA434D1CFA573F00106E47 /* Behavior.swift */,
+				FCFA435C1CFA5A8C00106E47 /* Protocols */,
 				FCFA434E1CFA573F00106E47 /* BehaviorStore.swift */,
 				FCFA434F1CFA573F00106E47 /* Entity.swift */,
-				FCFA43501CFA573F00106E47 /* Graph.swift */,
 				FCFA43511CFA573F00106E47 /* Scene.swift */,
 			);
 			name = Core;
@@ -211,6 +210,15 @@
 				FCDB9B081CFA39CB00F153A0 /* CFUUID.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		FCFA435C1CFA5A8C00106E47 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FCFA434D1CFA573F00106E47 /* Behavior.swift */,
+				FCFA43501CFA573F00106E47 /* Graph.swift */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
