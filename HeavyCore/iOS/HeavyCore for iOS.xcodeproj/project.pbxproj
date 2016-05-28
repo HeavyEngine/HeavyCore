@@ -43,6 +43,8 @@
 		FCDB9B0E1CFA3B7A00F153A0 /* UUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDB9B0C1CFA3B7A00F153A0 /* UUID.swift */; };
 		FCDB9B101CFA42E100F153A0 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDB9B0F1CFA42E100F153A0 /* Scene.swift */; };
 		FCDB9B111CFA42E100F153A0 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDB9B0F1CFA42E100F153A0 /* Scene.swift */; };
+		FCFA434B1CFA546A00106E47 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA434A1CFA546A00106E47 /* Graph.swift */; };
+		FCFA434C1CFA546A00106E47 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA434A1CFA546A00106E47 /* Graph.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,7 @@
 		FCDB9B081CFA39CB00F153A0 /* CFUUID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFUUID.swift; sourceTree = "<group>"; };
 		FCDB9B0C1CFA3B7A00F153A0 /* UUID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUID.swift; sourceTree = "<group>"; };
 		FCDB9B0F1CFA42E100F153A0 /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scene.swift; path = ../../Common/Scene.swift; sourceTree = "<group>"; };
+		FCFA434A1CFA546A00106E47 /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Graph.swift; path = ../../Common/Graph.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,7 @@
 				FC3F309E1CD99DC20014ECD5 /* Entity.swift */,
 				FC7C90001CECFF1900ADE499 /* BehaviorStore.swift */,
 				FCDB9B0F1CFA42E100F153A0 /* Scene.swift */,
+				FCFA434A1CFA546A00106E47 /* Graph.swift */,
 			);
 			name = Systems;
 			sourceTree = "<group>";
@@ -326,6 +330,7 @@
 				FCDB9B091CFA39CB00F153A0 /* CFUUID.swift in Sources */,
 				FCDB9B0D1CFA3B7A00F153A0 /* UUID.swift in Sources */,
 				FCA4E4ED1CE68B5300362AD9 /* Units.swift in Sources */,
+				FCFA434B1CFA546A00106E47 /* Graph.swift in Sources */,
 				FC6C80091CD963ED001E2F90 /* Point.swift in Sources */,
 				FCA4E4E11CE685AC00362AD9 /* Timer.swift in Sources */,
 				FCA4E4EA1CE68B4600362AD9 /* Geometry.swift in Sources */,
@@ -349,6 +354,7 @@
 				FCDB9B0A1CFA39CB00F153A0 /* CFUUID.swift in Sources */,
 				FCDB9B0E1CFA3B7A00F153A0 /* UUID.swift in Sources */,
 				FCA4E4EB1CE68B4A00362AD9 /* Point.swift in Sources */,
+				FCFA434C1CFA546A00106E47 /* Graph.swift in Sources */,
 				FC6C80111CD963EE001E2F90 /* Units.swift in Sources */,
 				FCA4E4F31CE6CFC500362AD9 /* Numeric.swift in Sources */,
 				FC6C80121CD963EE001E2F90 /* Vector.swift in Sources */,

@@ -7,9 +7,28 @@
 //
 import Foundation
 
-public class Entity {
+public class Entity: Graph {
   var id = UUID()
+
   public var behaviors = BehaviorStore()
+
+  public var parent: Graph? = nil
+
+  private var _children = Set<Entity>()
+
+  public var children: Set<Entity> {
+    return _children
+  }
+
+  public func addChild(entity: Entity) {
+    entity.parent = self
+    _children.insert(entity)
+  }
+
+  public func removeChild(entity: Entity) {
+    entity.parent = nil
+    _children.remove(entity)
+  }
 
   public init() {}
 

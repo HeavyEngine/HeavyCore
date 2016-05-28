@@ -8,21 +8,23 @@
 
 import Foundation
 
-public class Scene {
+public class Scene: Graph {
+  public var parent: Graph? = nil
   private var _children = Set<Entity>()
+
+  public init() {}
 
   public var children: Set<Entity> {
     return _children
   }
 
-  public init() {}
-
   public func addChild(entity: Entity) {
+    entity.parent = self
     _children.insert(entity)
   }
 
   public func removeChild(entity: Entity) {
+    entity.parent = nil
     _children.remove(entity)
   }
-
 }
