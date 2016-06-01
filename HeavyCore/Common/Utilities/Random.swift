@@ -14,20 +14,20 @@ public struct PRNG {
     ///  Main algorithm for generating pseudo-random numbers
     private struct Xoroshiro128Plus {
         
-        var state: [UInt]
+        var state: (UInt, UInt)
         
         func rotateLeft(a: UInt, b: UInt) -> UInt {
             return (a << b) | (a >> (64 - b))
         }
         
         mutating func next() -> UInt {
-            let s0: UInt = state[0]
-            var s1 = state[1]
+            let s0: UInt = state.0
+            var s1 = state.1
             let result = s0 &+ s1
             
             s1 ^= s0
-            state[0] = rotateLeft(s0, b: 55) ^ s1 ^ (s1 << 14)
-            state[1] = rotateLeft(s1, b: 36)
+            state.0 = rotateLeft(s0, b: 55) ^ s1 ^ (s1 << 14)
+            state.1 = rotateLeft(s1, b: 36)
             
             return result
         }
@@ -49,7 +49,7 @@ public struct PRNG {
     }
     
     public var seed: UInt
-    private var rngState: [UInt] = [0, 0]
+    private var rngState: (UInt, UInt) = (0, 0)
     private var generator: Xoroshiro128Plus
     
     ///  Initialize a PRNG based on the given seed. If a seed is not given it uses Timer.time as the seed.
@@ -57,7 +57,7 @@ public struct PRNG {
     ///  - returns: PRNG
     public init(seed: UInt = UInt(Timer().time * 100000)) {
         self.seed = seed
-        self.generator = Xoroshiro128Plus(state: [0, 0])
+        self.generator = Xoroshiro128Plus(state: (0, 0))
         generateSeeds(seed)
         self.generator.state = rngState
         nextUInt()
@@ -69,8 +69,8 @@ public struct PRNG {
         
         for x in 0...10 {
             statePart = seeder.nextSeed()
-            rngState[0] = x == 9 ? statePart : 0
-            rngState[1] = x == 10 ? statePart : 0
+            rngState.0 = x == 9 ? statePart : 0
+            rngState.1 = x == 10 ? statePart : 0
         }
     }
     
