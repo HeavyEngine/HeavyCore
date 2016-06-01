@@ -7,23 +7,42 @@
 //
 import Foundation
 
-public struct Entity {
-  var id: String = NSUUID().UUIDString
+public class Entity: Graph {
+  var id = UUID()
+
   public var behaviors = BehaviorStore()
+
+  public var parent: Graph? = nil
+
+  private var _children = Set<Entity>()
+
+  public var children: Set<Entity>? {
+    return _children.count > 0 ? _children : nil
+  }
+
+  public func addChild(entity: Entity) {
+    entity.parent = self
+    _children.insert(entity)
+  }
+
+  public func removeChild(entity: Entity) {
+    entity.parent = nil
+    _children.remove(entity)
+  }
 
   public init() {}
 
   ///  Used to remove a given `Behavior` from an `Entity`.
   ///
   ///  - parameter behavior: The `Behavior` that is to be removed.
-  public mutating func remove(behavior: Behavior) {
+  public func remove(behavior: Behavior) {
     behaviors.remove(behavior)
   }
 
   ///  Add a behavior to this entity to be processed on update.
   ///
   ///  - parameter behavior: A behavior to be processed on update.
-  public mutating func add<T: Behavior>(behavior: T) {
+  public func add<T: Behavior>(behavior: T) {
     behavior.parent = self
     behaviors.add(behavior)
   }
@@ -32,7 +51,7 @@ public struct Entity {
   ///  any behaviors this entity has.
   ///
   ///  - parameter delta: The time difference between now and the last update.
-  public mutating func update(delta: Double) {
+  public func update(delta: Double) {
     for behavior in behaviors {
       behavior.update(delta)
     }
@@ -53,4 +72,28 @@ public struct Entity {
   public func has<T: Behavior>(behavior: T.Type) -> Bool {
     return find(behavior) != nil ? true : false
   }
+}
+
+// MARK: - String Extensions
+extension Entity: CustomStringConvertible {
+  public var description: String {
+    return "{id: \(id.string) behaviors: \(behaviors), children: \(children)}"
+  }
+}
+
+extension Entity: CustomDebugStringConvertible {
+  public var debugDescription: String {
+    return "{id: \(id.string), behaviors: \(behaviors), children: \(children)}"
+  }
+}
+
+extension Entity: Hashable {
+  public var hashValue: Int {
+    return id.string.hashValue
+
+  }
+}
+
+public func ==(left: Entity, right: Entity) -> Bool {
+  return left === right
 }

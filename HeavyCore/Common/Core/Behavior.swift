@@ -12,3 +12,7 @@ public protocol Behavior: class {
   var parent: Entity? { get set }
   func update(delta: Double)
 }
+
+public func ==(left: Behavior, right: Behavior) -> Bool {
+  return left === right
+}

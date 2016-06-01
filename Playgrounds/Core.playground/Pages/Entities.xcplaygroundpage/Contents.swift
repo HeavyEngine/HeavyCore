@@ -53,4 +53,22 @@ for time in 0.stride(to: 1, by: 1.0/15) {
   }
 }
 
+var newEntity = Entity()
+var anotherE = newEntity
+myEntity == newEntity
+
+newEntity == anotherE
+newEntity
+anotherE
+
+var myScene = Scene()
+myScene.addChild(newEntity)
+myScene.addChild(anotherE)
+myScene.addChild(myEntity)
+myScene.removeChild(anotherE)
+
+myScene.children?.forEach { element in
+  print(element)
+}
+
 //: [Next](@next)

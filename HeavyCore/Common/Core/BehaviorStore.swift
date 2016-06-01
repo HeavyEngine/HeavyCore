@@ -14,6 +14,9 @@ public struct BehaviorStore {
 
   private var storageIDs = [Behavior.Type]()
   private var storage    = [BehaviorID: [Behavior]]()
+  public var values: Array<Behavior> {
+    return self.flatMap({return $0})
+  }
 
   public init() {}
 
@@ -70,6 +73,19 @@ public struct BehaviorStore {
   }
 }
 
+// MARK: - String Extensions
+extension BehaviorStore: CustomStringConvertible {
+  public var description: String {
+    return "{total: \(values.count), values: \(values)}"
+  }
+}
+
+extension BehaviorStore: CustomDebugStringConvertible {
+  public var debugDescription: String {
+    return "{total: \(values.count), values: \(values)}"
+  }
+}
+
 public struct BehaviorStoreGenerator: GeneratorType {
   var store: BehaviorStore
   var index = 0
@@ -95,4 +111,8 @@ extension BehaviorStore: SequenceType {
   public func generate() -> BehaviorStoreGenerator {
     return BehaviorStoreGenerator(store: self)
   }
+}
+
+public func ==(left: BehaviorStore, right: BehaviorStore) -> Bool {
+  return left.elementsEqual(right, isEquivalent: {$0 === $1})
 }
