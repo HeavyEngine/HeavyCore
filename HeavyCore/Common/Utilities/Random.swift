@@ -63,7 +63,7 @@ public struct PRNG {
         nextUInt64()
     }
 
-    private mutating func generateSeeds(seed: UInt64){
+    private mutating func generateSeeds(seed: UInt64) {
         var seeder = SplitMix64(state: seed)
         var statePart: UInt64
 
@@ -82,4 +82,3 @@ public struct PRNG {
         return generator.next() % (max - min + 1) + min
     }
 }
-

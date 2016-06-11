@@ -7,44 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C285CAAB1CED615400B1390B /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = C285CAAA1CED615400B1390B /* Random.swift */; };
 		FC1F90B21CF4E7BF0049C4D2 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1F90B11CF4E7BF0049C4D2 /* Nimble.framework */; };
 		FC1F90B41CF4E7C60049C4D2 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1F90B31CF4E7C60049C4D2 /* Quick.framework */; };
+		FC59959A1D0B642A006E3A6C /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA434D1CFA573F00106E47 /* Behavior.swift */; };
+		FC59959B1D0B642A006E3A6C /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA43501CFA573F00106E47 /* Graph.swift */; };
+		FC59959C1D0B642A006E3A6C /* BehaviorStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA434E1CFA573F00106E47 /* BehaviorStore.swift */; };
+		FC59959D1D0B642A006E3A6C /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA434F1CFA573F00106E47 /* Entity.swift */; };
+		FC59959E1D0B642A006E3A6C /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA43511CFA573F00106E47 /* Scene.swift */; };
+		FC59959F1D0B642A006E3A6C /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4E4E31CE6860600362AD9 /* Angle.swift */; };
+		FC5995A01D0B642A006E3A6C /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FDE1CD96200001E2F90 /* Geometry.swift */; };
+		FC5995A11D0B642A006E3A6C /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FDD1CD96200001E2F90 /* Point.swift */; };
+		FC5995A21D0B642A006E3A6C /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FDF1CD96200001E2F90 /* Quad.swift */; };
+		FC5995A31D0B642A006E3A6C /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FE01CD96200001E2F90 /* Units.swift */; };
+		FC5995A41D0B642A006E3A6C /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FE11CD96200001E2F90 /* Vector.swift */; };
+		FC5995A51D0B642A006E3A6C /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4E4DE1CE685AC00362AD9 /* Timer.swift */; };
+		FC5995A61D0B642A006E3A6C /* UUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDB9B0C1CFA3B7A00F153A0 /* UUID.swift */; };
+		FC5995A71D0B642A006E3A6C /* CFUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDB9B081CFA39CB00F153A0 /* CFUUID.swift */; };
+		FC5995A81D0B642A006E3A6C /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4E4DD1CE685AC00362AD9 /* Math.swift */; };
+		FC5995A91D0B642A006E3A6C /* Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4E4F11CE6CF9000362AD9 /* Numeric.swift */; };
+		FC5995AA1D0B642A006E3A6C /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = C285CAAA1CED615400B1390B /* Random.swift */; };
+		FC5995AE1D0B64F5006E3A6C /* HeavyCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6C7FF11CD962E4001E2F90 /* HeavyCore.framework */; };
 		FC6C7FF41CD962E4001E2F90 /* HeavyCore.h in Headers */ = {isa = PBXBuildFile; fileRef = FC6C7FF31CD962E4001E2F90 /* HeavyCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FC6C7FFB1CD962E5001E2F90 /* HeavyCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6C7FF11CD962E4001E2F90 /* HeavyCore.framework */; };
 		FC6C80001CD962E5001E2F90 /* HeavyCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FFF1CD962E5001E2F90 /* HeavyCoreTests.swift */; };
-		FC6C80091CD963ED001E2F90 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FDD1CD96200001E2F90 /* Point.swift */; };
-		FC6C800F1CD963EE001E2F90 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FDE1CD96200001E2F90 /* Geometry.swift */; };
-		FC6C80101CD963EE001E2F90 /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FDF1CD96200001E2F90 /* Quad.swift */; };
-		FC6C80111CD963EE001E2F90 /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FE01CD96200001E2F90 /* Units.swift */; };
-		FC6C80121CD963EE001E2F90 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FE11CD96200001E2F90 /* Vector.swift */; };
-		FCA4E4DF1CE685AC00362AD9 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4E4DD1CE685AC00362AD9 /* Math.swift */; };
-		FCA4E4E11CE685AC00362AD9 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4E4DE1CE685AC00362AD9 /* Timer.swift */; };
-		FCA4E4E51CE6860600362AD9 /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4E4E31CE6860600362AD9 /* Angle.swift */; };
-		FCA4E4E61CE68B3600362AD9 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FE11CD96200001E2F90 /* Vector.swift */; };
-		FCA4E4E91CE68B4300362AD9 /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4E4E31CE6860600362AD9 /* Angle.swift */; };
-		FCA4E4EA1CE68B4600362AD9 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FDE1CD96200001E2F90 /* Geometry.swift */; };
-		FCA4E4EB1CE68B4A00362AD9 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FDD1CD96200001E2F90 /* Point.swift */; };
-		FCA4E4EC1CE68B4F00362AD9 /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FDF1CD96200001E2F90 /* Quad.swift */; };
-		FCA4E4ED1CE68B5300362AD9 /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FE01CD96200001E2F90 /* Units.swift */; };
-		FCA4E4EE1CE68B5800362AD9 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4E4DD1CE685AC00362AD9 /* Math.swift */; };
-		FCA4E4EF1CE68B5B00362AD9 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4E4DE1CE685AC00362AD9 /* Timer.swift */; };
-		FCA4E4F21CE6CF9000362AD9 /* Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4E4F11CE6CF9000362AD9 /* Numeric.swift */; };
-		FCA4E4F31CE6CFC500362AD9 /* Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4E4F11CE6CF9000362AD9 /* Numeric.swift */; };
-		FCDB9B091CFA39CB00F153A0 /* CFUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDB9B081CFA39CB00F153A0 /* CFUUID.swift */; };
-		FCDB9B0A1CFA39CB00F153A0 /* CFUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDB9B081CFA39CB00F153A0 /* CFUUID.swift */; };
-		FCDB9B0D1CFA3B7A00F153A0 /* UUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDB9B0C1CFA3B7A00F153A0 /* UUID.swift */; };
-		FCDB9B0E1CFA3B7A00F153A0 /* UUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDB9B0C1CFA3B7A00F153A0 /* UUID.swift */; };
-		FCFA43521CFA573F00106E47 /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA434D1CFA573F00106E47 /* Behavior.swift */; };
-		FCFA43531CFA573F00106E47 /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA434D1CFA573F00106E47 /* Behavior.swift */; };
-		FCFA43541CFA573F00106E47 /* BehaviorStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA434E1CFA573F00106E47 /* BehaviorStore.swift */; };
-		FCFA43551CFA573F00106E47 /* BehaviorStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA434E1CFA573F00106E47 /* BehaviorStore.swift */; };
-		FCFA43561CFA573F00106E47 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA434F1CFA573F00106E47 /* Entity.swift */; };
-		FCFA43571CFA573F00106E47 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA434F1CFA573F00106E47 /* Entity.swift */; };
-		FCFA43581CFA573F00106E47 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA43501CFA573F00106E47 /* Graph.swift */; };
-		FCFA43591CFA573F00106E47 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA43501CFA573F00106E47 /* Graph.swift */; };
-		FCFA435A1CFA573F00106E47 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA43511CFA573F00106E47 /* Scene.swift */; };
-		FCFA435B1CFA573F00106E47 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA43511CFA573F00106E47 /* Scene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,8 +82,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC1F90B41CF4E7C60049C4D2 /* Quick.framework in Frameworks */,
+				FC5995AE1D0B64F5006E3A6C /* HeavyCore.framework in Frameworks */,
 				FC1F90B21CF4E7BF0049C4D2 /* Nimble.framework in Frameworks */,
-				FC6C7FFB1CD962E5001E2F90 /* HeavyCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,23 +313,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCFA43521CFA573F00106E47 /* Behavior.swift in Sources */,
-				FCA4E4E91CE68B4300362AD9 /* Angle.swift in Sources */,
-				FCA4E4F21CE6CF9000362AD9 /* Numeric.swift in Sources */,
-				FCDB9B091CFA39CB00F153A0 /* CFUUID.swift in Sources */,
-				FCDB9B0D1CFA3B7A00F153A0 /* UUID.swift in Sources */,
-				FCFA43541CFA573F00106E47 /* BehaviorStore.swift in Sources */,
-				FCA4E4ED1CE68B5300362AD9 /* Units.swift in Sources */,
-				FC6C80091CD963ED001E2F90 /* Point.swift in Sources */,
-				FCFA43581CFA573F00106E47 /* Graph.swift in Sources */,
-				FCA4E4E11CE685AC00362AD9 /* Timer.swift in Sources */,
-				FCFA435A1CFA573F00106E47 /* Scene.swift in Sources */,
-				FCA4E4EA1CE68B4600362AD9 /* Geometry.swift in Sources */,
-				C285CAAB1CED615400B1390B /* Random.swift in Sources */,
-				FCFA43561CFA573F00106E47 /* Entity.swift in Sources */,
-				FCA4E4EC1CE68B4F00362AD9 /* Quad.swift in Sources */,
-				FCA4E4E61CE68B3600362AD9 /* Vector.swift in Sources */,
-				FCA4E4DF1CE685AC00362AD9 /* Math.swift in Sources */,
+				FC5995A11D0B642A006E3A6C /* Point.swift in Sources */,
+				FC5995A41D0B642A006E3A6C /* Vector.swift in Sources */,
+				FC59959D1D0B642A006E3A6C /* Entity.swift in Sources */,
+				FC5995AA1D0B642A006E3A6C /* Random.swift in Sources */,
+				FC5995A51D0B642A006E3A6C /* Timer.swift in Sources */,
+				FC5995A01D0B642A006E3A6C /* Geometry.swift in Sources */,
+				FC5995A71D0B642A006E3A6C /* CFUUID.swift in Sources */,
+				FC5995A61D0B642A006E3A6C /* UUID.swift in Sources */,
+				FC5995A31D0B642A006E3A6C /* Units.swift in Sources */,
+				FC59959F1D0B642A006E3A6C /* Angle.swift in Sources */,
+				FC59959C1D0B642A006E3A6C /* BehaviorStore.swift in Sources */,
+				FC59959E1D0B642A006E3A6C /* Scene.swift in Sources */,
+				FC5995A91D0B642A006E3A6C /* Numeric.swift in Sources */,
+				FC5995A21D0B642A006E3A6C /* Quad.swift in Sources */,
+				FC59959B1D0B642A006E3A6C /* Graph.swift in Sources */,
+				FC59959A1D0B642A006E3A6C /* Behavior.swift in Sources */,
+				FC5995A81D0B642A006E3A6C /* Math.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,23 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCFA43531CFA573F00106E47 /* Behavior.swift in Sources */,
-				FC6C80101CD963EE001E2F90 /* Quad.swift in Sources */,
-				FC6C800F1CD963EE001E2F90 /* Geometry.swift in Sources */,
-				FCA4E4E51CE6860600362AD9 /* Angle.swift in Sources */,
-				FCDB9B0A1CFA39CB00F153A0 /* CFUUID.swift in Sources */,
-				FCFA43551CFA573F00106E47 /* BehaviorStore.swift in Sources */,
-				FCDB9B0E1CFA3B7A00F153A0 /* UUID.swift in Sources */,
-				FCA4E4EB1CE68B4A00362AD9 /* Point.swift in Sources */,
-				FCFA43591CFA573F00106E47 /* Graph.swift in Sources */,
-				FC6C80111CD963EE001E2F90 /* Units.swift in Sources */,
-				FCFA435B1CFA573F00106E47 /* Scene.swift in Sources */,
-				FCA4E4F31CE6CFC500362AD9 /* Numeric.swift in Sources */,
-				FC6C80121CD963EE001E2F90 /* Vector.swift in Sources */,
-				FCFA43571CFA573F00106E47 /* Entity.swift in Sources */,
 				FC6C80001CD962E5001E2F90 /* HeavyCoreTests.swift in Sources */,
-				FCA4E4EF1CE68B5B00362AD9 /* Timer.swift in Sources */,
-				FCA4E4EE1CE68B5800362AD9 /* Math.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +355,8 @@
 		FC6C80031CD962E5001E2F90 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -403,6 +373,8 @@
 		FC6C80041CD962E5001E2F90 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -476,9 +448,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -519,6 +491,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
