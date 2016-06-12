@@ -55,7 +55,7 @@ public struct PRNG {
     ///  Initialize a PRNG based on the given seed. If a seed is not given it uses Timer.time as the seed.
     ///  - parameter seed: UInt64
     ///  - returns: PRNG
-    public init(seed: UInt64 = UInt64(Timer().time * 100000)) {
+    public init(seed: UInt64 = UInt64(Timer().now.nanoseconds * 100000)) {
         self.seed = seed
         self.generator = Xoroshiro128Plus(state: (0, 0))
         generateSeeds(seed)

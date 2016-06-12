@@ -4,7 +4,7 @@ import HeavyCore
 
 let myTimer = Timer()
 
-let start = myTimer.time //Start time
+let start = myTimer.now //Start time
 
 // Silly task
 var foo = "foo"
@@ -12,25 +12,18 @@ for value in 0.stride(to: 100, by: 1) {
   foo += " bar"
 }
 foo += "."
-let end = myTimer.time //End time
+let end = myTimer.now //End time
+(end - start).milliseconds //ms to perform task
 
-1000 * (end - start) //ms to perform task
-
-
-var fpsTimer = Timer()
+let fpsTimer = Timer()
 var prng = PRNG()
-var loopStart = fpsTimer.time
 
+let loopStart = fpsTimer.now
 for frame in 0.stride(to: 5000, by: 1) {
-//  prng.nextUInt()
-  fpsTimer.update()
-  fpsTimer.deltaTime
+  prng.nextUInt64()
 }
-var loopEnd = fpsTimer.time
-
-(loopEnd-loopStart)
-
-fpsTimer.fps
-fpsTimer.averageDelta
+let loopEnd = fpsTimer.now
+loopEnd.elapsed(fpsTimer.now)
+loopEnd.elapsed(loopStart)
 
 //: [Next](@next)

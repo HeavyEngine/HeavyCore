@@ -18,7 +18,6 @@
 		FC5995A01D0B642A006E3A6C /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FDE1CD96200001E2F90 /* Geometry.swift */; };
 		FC5995A11D0B642A006E3A6C /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FDD1CD96200001E2F90 /* Point.swift */; };
 		FC5995A21D0B642A006E3A6C /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FDF1CD96200001E2F90 /* Quad.swift */; };
-		FC5995A31D0B642A006E3A6C /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FE01CD96200001E2F90 /* Units.swift */; };
 		FC5995A41D0B642A006E3A6C /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FE11CD96200001E2F90 /* Vector.swift */; };
 		FC5995A51D0B642A006E3A6C /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4E4DE1CE685AC00362AD9 /* Timer.swift */; };
 		FC5995A61D0B642A006E3A6C /* UUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDB9B0C1CFA3B7A00F153A0 /* UUID.swift */; };
@@ -29,6 +28,8 @@
 		FC5995AE1D0B64F5006E3A6C /* HeavyCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6C7FF11CD962E4001E2F90 /* HeavyCore.framework */; };
 		FC6C7FF41CD962E4001E2F90 /* HeavyCore.h in Headers */ = {isa = PBXBuildFile; fileRef = FC6C7FF31CD962E4001E2F90 /* HeavyCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FC6C80001CD962E5001E2F90 /* HeavyCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FFF1CD962E5001E2F90 /* HeavyCoreTests.swift */; };
+		FC6EF23C1D0E07850064F21F /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6EF23B1D0E07850064F21F /* Time.swift */; };
+		FC6EF23D1D0E07850064F21F /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6EF23B1D0E07850064F21F /* Time.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +49,6 @@
 		FC6C7FDD1CD96200001E2F90 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		FC6C7FDE1CD96200001E2F90 /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		FC6C7FDF1CD96200001E2F90 /* Quad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quad.swift; sourceTree = "<group>"; };
-		FC6C7FE01CD96200001E2F90 /* Units.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
 		FC6C7FE11CD96200001E2F90 /* Vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
 		FC6C7FF11CD962E4001E2F90 /* HeavyCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HeavyCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6C7FF31CD962E4001E2F90 /* HeavyCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeavyCore.h; sourceTree = "<group>"; };
@@ -56,6 +56,7 @@
 		FC6C7FFF1CD962E5001E2F90 /* HeavyCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeavyCoreTests.swift; sourceTree = "<group>"; };
 		FC6C80011CD962E5001E2F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC6C80081CD96376001E2F90 /* Core.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Core.playground; path = ../../Playgrounds/Core.playground; sourceTree = "<group>"; };
+		FC6EF23B1D0E07850064F21F /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		FCA4E4DD1CE685AC00362AD9 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		FCA4E4DE1CE685AC00362AD9 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		FCA4E4E31CE6860600362AD9 /* Angle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
@@ -117,7 +118,6 @@
 				FC6C7FDE1CD96200001E2F90 /* Geometry.swift */,
 				FC6C7FDD1CD96200001E2F90 /* Point.swift */,
 				FC6C7FDF1CD96200001E2F90 /* Quad.swift */,
-				FC6C7FE01CD96200001E2F90 /* Units.swift */,
 				FC6C7FE11CD96200001E2F90 /* Vector.swift */,
 			);
 			name = Geometry;
@@ -127,10 +127,11 @@
 		FC6C7FE21CD96200001E2F90 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				FC6EF23B1D0E07850064F21F /* Time.swift */,
 				FCA4E4DE1CE685AC00362AD9 /* Timer.swift */,
 				FCDB9B0C1CFA3B7A00F153A0 /* UUID.swift */,
-				FCDB9B0B1CFA39D000F153A0 /* Extensions */,
 				FCA4E4F01CE6CF7700362AD9 /* Math */,
+				FCDB9B0B1CFA39D000F153A0 /* Extensions */,
 			);
 			name = Utilities;
 			path = ../../Common/Utilities;
@@ -319,9 +320,9 @@
 				FC5995AA1D0B642A006E3A6C /* Random.swift in Sources */,
 				FC5995A51D0B642A006E3A6C /* Timer.swift in Sources */,
 				FC5995A01D0B642A006E3A6C /* Geometry.swift in Sources */,
+				FC6EF23C1D0E07850064F21F /* Time.swift in Sources */,
 				FC5995A71D0B642A006E3A6C /* CFUUID.swift in Sources */,
 				FC5995A61D0B642A006E3A6C /* UUID.swift in Sources */,
-				FC5995A31D0B642A006E3A6C /* Units.swift in Sources */,
 				FC59959F1D0B642A006E3A6C /* Angle.swift in Sources */,
 				FC59959C1D0B642A006E3A6C /* BehaviorStore.swift in Sources */,
 				FC59959E1D0B642A006E3A6C /* Scene.swift in Sources */,
@@ -337,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC6EF23D1D0E07850064F21F /* Time.swift in Sources */,
 				FC6C80001CD962E5001E2F90 /* HeavyCoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
