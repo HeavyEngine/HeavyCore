@@ -23,7 +23,7 @@ for frame in 0.stride(to: 5000, by: 1) {
   prng.nextUInt64()
 }
 let loopEnd = fpsTimer.now
-loopEnd.elapsed(fpsTimer.now)
 loopEnd.elapsed(loopStart)
+loopEnd - loopStart // The same as above
 
 //: [Next](@next)
