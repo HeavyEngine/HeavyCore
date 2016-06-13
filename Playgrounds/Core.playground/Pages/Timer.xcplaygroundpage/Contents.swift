@@ -1,6 +1,9 @@
 //: [Previous](@previous)
+import XCPlayground
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
 
 import HeavyCore
+
 
 let myTimer = Timer()
 
@@ -17,13 +20,27 @@ let end = myTimer.now //End time
 
 let fpsTimer = Timer()
 var prng = PRNG()
-
 let loopStart = fpsTimer.now
 for frame in 0.stride(to: 5000, by: 1) {
   prng.nextUInt64()
 }
 let loopEnd = fpsTimer.now
-loopEnd.elapsed(loopStart)
-loopEnd - loopStart // The same as above
+loopEnd - loopStart
+
+var startT: Time?
+var lastT: Time?
+var priorT: Time?
+
+Task(interval: 1.seconds, count: 5) { time in
+  if startT == nil {
+    startT = time
+  }
+  priorT = lastT
+  lastT = time
+  if let start = startT, last = lastT, prior = priorT {
+    "currentDuration \((last - start).milliseconds)"
+    "\n delta \((last - prior).milliseconds)"
+  }
+}.start()
 
 //: [Next](@next)

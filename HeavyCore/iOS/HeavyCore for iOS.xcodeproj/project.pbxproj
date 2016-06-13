@@ -30,6 +30,8 @@
 		FC6C80001CD962E5001E2F90 /* HeavyCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FFF1CD962E5001E2F90 /* HeavyCoreTests.swift */; };
 		FC6EF23C1D0E07850064F21F /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6EF23B1D0E07850064F21F /* Time.swift */; };
 		FC6EF23D1D0E07850064F21F /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6EF23B1D0E07850064F21F /* Time.swift */; };
+		FC6EF2421D0E33FA0064F21F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6EF2411D0E33FA0064F21F /* Task.swift */; };
+		FC6EF2431D0E33FA0064F21F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6EF2411D0E33FA0064F21F /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,7 @@
 		FC6C80011CD962E5001E2F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC6C80081CD96376001E2F90 /* Core.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Core.playground; path = ../../Playgrounds/Core.playground; sourceTree = "<group>"; };
 		FC6EF23B1D0E07850064F21F /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		FC6EF2411D0E33FA0064F21F /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		FCA4E4DD1CE685AC00362AD9 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		FCA4E4DE1CE685AC00362AD9 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		FCA4E4E31CE6860600362AD9 /* Angle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
@@ -127,6 +130,7 @@
 		FC6C7FE21CD96200001E2F90 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				FC6EF2411D0E33FA0064F21F /* Task.swift */,
 				FC6EF23B1D0E07850064F21F /* Time.swift */,
 				FCA4E4DE1CE685AC00362AD9 /* Timer.swift */,
 				FCDB9B0C1CFA3B7A00F153A0 /* UUID.swift */,
@@ -330,6 +334,7 @@
 				FC5995A21D0B642A006E3A6C /* Quad.swift in Sources */,
 				FC59959B1D0B642A006E3A6C /* Graph.swift in Sources */,
 				FC59959A1D0B642A006E3A6C /* Behavior.swift in Sources */,
+				FC6EF2421D0E33FA0064F21F /* Task.swift in Sources */,
 				FC5995A81D0B642A006E3A6C /* Math.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC6EF23D1D0E07850064F21F /* Time.swift in Sources */,
+				FC6EF2431D0E33FA0064F21F /* Task.swift in Sources */,
 				FC6C80001CD962E5001E2F90 /* HeavyCoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

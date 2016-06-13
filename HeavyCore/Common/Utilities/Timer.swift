@@ -9,14 +9,14 @@
 import Foundation
 
 public struct Timer {
-  var started = Time(0)
+  var started = Time()
   private var period: UInt64 {
     var info = mach_timebase_info_data_t(numer: 0, denom: 0)
     mach_timebase_info(&info)
     return UInt64(info.numer / info.denom)
   }
   public var now: Time {
-    return Time(UInt(mach_absolute_time() * period))
+    return Time(Double(mach_absolute_time() * period))
   }
   public var age: Time {
     return now - started
