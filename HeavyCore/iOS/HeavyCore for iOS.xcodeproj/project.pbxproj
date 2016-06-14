@@ -165,9 +165,9 @@
 			isa = PBXGroup;
 			children = (
 				FC6C80081CD96376001E2F90 /* Core.playground */,
-				FC1F90B51CF4E7FA0049C4D2 /* Frameworks */,
 				FCA7CF511CD1643400AC174C /* HeavyCore */,
 				FC6C7FFE1CD962E5001E2F90 /* HeavyCoreTests */,
+				FC1F90B51CF4E7FA0049C4D2 /* Frameworks */,
 				FCA7CF501CD1643400AC174C /* Products */,
 			);
 			indentWidth = 2;

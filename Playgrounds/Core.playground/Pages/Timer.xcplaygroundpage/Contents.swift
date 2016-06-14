@@ -31,27 +31,14 @@ var startT = Time()
 var priorT = Time()
 var lastT  = Time()
 let task1: Task
-task1 = Task(every: 0.5.seconds) { time in
-  if startT == 0.seconds {
-    startT  = time
-    lastT   = time
-    priorT  = time
-  } else {
-    lastT = time
-    if lastT - startT >= 3.seconds {
-      print("Task1: stopping")
-      task1.stop()
-      return
-    } else {
-      print("Task1: \((lastT - priorT).seconds) - Runs indefinitely, but we'll stop after 2 seconds from inside the closure.")
-    }
-    priorT = lastT
-  }
+task1 = Task(every: 1.seconds) { time in
+  print("Task1: Runs indefinitely.")
 }
 task1.start()
 
-Task(after: 1.seconds) { _ in
-  print("Task2: One second delayed task.")
+Task(after: 5.seconds) { _ in
+  print("Task2: Five second delayed task, stops Task1.")
+  task1.stop()
 }.start()
 
 Task(every: 1.seconds, repeatCount: 3) { _ in
