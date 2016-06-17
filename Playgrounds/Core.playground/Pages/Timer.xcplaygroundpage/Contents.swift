@@ -4,7 +4,6 @@ XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
 
 import HeavyCore
 
-
 let myTimer = Timer()
 
 let start = myTimer.now //Start time
@@ -25,16 +24,16 @@ for frame in 0.stride(to: 5000, by: 1) {
   prng.nextUInt64()
 }
 let loopEnd = fpsTimer.now
-loopEnd - loopStart
+loopEnd - loopStart // elapsed time of the loop...
 
 var startT = Time()
 var priorT = Time()
 var lastT  = Time()
-let task1: Task
-task1 = Task(every: 1.seconds) { time in
+let task1 = Task(every: 1.seconds) { time in
   print("Task1: Runs indefinitely.")
 }
 task1.start()
+task1.start() // Won't start twice.
 
 Task(after: 5.seconds) { _ in
   print("Task2: Five second delayed task, stops Task1.")

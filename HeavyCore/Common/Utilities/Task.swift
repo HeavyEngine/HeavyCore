@@ -10,6 +10,7 @@ import Foundation
 
 public class Task {
   public typealias Closure = (current: Time) -> ()
+  public var running = false
   private var cancelled = false
   private var interval: Time
   private var indefinite: Bool
@@ -52,6 +53,11 @@ public class Task {
 
   ///  Start the task.
   public func start() {
+    guard running == false else {
+      print("Task already running!")
+      return
+    }
+    running = true
     let timer = Timer()
     var currentTime = timer.now
     var accumulator = Time()
