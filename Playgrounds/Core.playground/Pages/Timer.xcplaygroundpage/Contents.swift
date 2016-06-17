@@ -1,10 +1,12 @@
 //: [Previous](@previous)
+import XCPlayground
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
 
 import HeavyCore
 
 let myTimer = Timer()
 
-let start = myTimer.time //Start time
+let start = myTimer.now //Start time
 
 // Silly task
 var foo = "foo"
@@ -12,25 +14,34 @@ for value in 0.stride(to: 100, by: 1) {
   foo += " bar"
 }
 foo += "."
-let end = myTimer.time //End time
+let end = myTimer.now //End time
+(end - start).milliseconds //ms to perform task
 
-1000 * (end - start) //ms to perform task
-
-
-var fpsTimer = Timer()
+let fpsTimer = Timer()
 var prng = PRNG()
-var loopStart = fpsTimer.time
-
+let loopStart = fpsTimer.now
 for frame in 0.stride(to: 5000, by: 1) {
-//  prng.nextUInt()
-  fpsTimer.update()
-  fpsTimer.deltaTime
+  prng.nextUInt64()
 }
-var loopEnd = fpsTimer.time
+let loopEnd = fpsTimer.now
+loopEnd - loopStart // elapsed time of the loop...
 
-(loopEnd-loopStart)
+var startT = Time()
+var priorT = Time()
+var lastT  = Time()
+let task1 = Task(every: 1.seconds) { time in
+  print("Task1: Runs indefinitely.")
+}
+task1.start()
+task1.start() // Won't start twice.
 
-fpsTimer.fps
-fpsTimer.averageDelta
+Task(after: 5.seconds) { _ in
+  print("Task2: Five second delayed task, stops Task1.")
+  task1.stop()
+}.start()
+
+Task(every: 1.seconds, repeatCount: 3) { _ in
+  print("Task3: Runs after 1 second, three times.")
+}.start()
 
 //: [Next](@next)

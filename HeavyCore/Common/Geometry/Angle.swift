@@ -51,6 +51,8 @@ public func *(lhs: Numeric, rhs: Angle) -> Angle {
   return Angle(radians: lhs.value() * rhs.radians)
 }
 
+// TODO: - Comparison Operators
+
 // MARK: - Global Trig Functions
 
 ///  Return the cosine of a given `Angle`.

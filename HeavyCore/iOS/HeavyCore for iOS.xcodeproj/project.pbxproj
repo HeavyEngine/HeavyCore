@@ -18,7 +18,6 @@
 		FC5995A01D0B642A006E3A6C /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FDE1CD96200001E2F90 /* Geometry.swift */; };
 		FC5995A11D0B642A006E3A6C /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FDD1CD96200001E2F90 /* Point.swift */; };
 		FC5995A21D0B642A006E3A6C /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FDF1CD96200001E2F90 /* Quad.swift */; };
-		FC5995A31D0B642A006E3A6C /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FE01CD96200001E2F90 /* Units.swift */; };
 		FC5995A41D0B642A006E3A6C /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FE11CD96200001E2F90 /* Vector.swift */; };
 		FC5995A51D0B642A006E3A6C /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4E4DE1CE685AC00362AD9 /* Timer.swift */; };
 		FC5995A61D0B642A006E3A6C /* UUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDB9B0C1CFA3B7A00F153A0 /* UUID.swift */; };
@@ -27,8 +26,13 @@
 		FC5995A91D0B642A006E3A6C /* Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4E4F11CE6CF9000362AD9 /* Numeric.swift */; };
 		FC5995AA1D0B642A006E3A6C /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = C285CAAA1CED615400B1390B /* Random.swift */; };
 		FC5995AE1D0B64F5006E3A6C /* HeavyCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6C7FF11CD962E4001E2F90 /* HeavyCore.framework */; };
+		FC64B9CB1D0F68C6008B4E61 /* TimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC64B9CA1D0F68C6008B4E61 /* TimeTests.swift */; };
+		FC64B9CC1D0F879F008B4E61 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA4E4DE1CE685AC00362AD9 /* Timer.swift */; };
+		FC64B9CD1D0F87AF008B4E61 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6EF23B1D0E07850064F21F /* Time.swift */; };
 		FC6C7FF41CD962E4001E2F90 /* HeavyCore.h in Headers */ = {isa = PBXBuildFile; fileRef = FC6C7FF31CD962E4001E2F90 /* HeavyCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FC6C80001CD962E5001E2F90 /* HeavyCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6C7FFF1CD962E5001E2F90 /* HeavyCoreTests.swift */; };
+		FC6EF23C1D0E07850064F21F /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6EF23B1D0E07850064F21F /* Time.swift */; };
+		FC6EF2421D0E33FA0064F21F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6EF2411D0E33FA0064F21F /* Task.swift */; };
+		FC6EF2431D0E33FA0064F21F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6EF2411D0E33FA0064F21F /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,17 +49,18 @@
 		C285CAAA1CED615400B1390B /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		FC1F90B11CF4E7BF0049C4D2 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "../../Carthage/Checkouts/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
 		FC1F90B31CF4E7C60049C4D2 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "../../Carthage/Checkouts/Quick/build/Debug-iphoneos/Quick.framework"; sourceTree = "<group>"; };
+		FC64B9CA1D0F68C6008B4E61 /* TimeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTests.swift; sourceTree = "<group>"; };
 		FC6C7FDD1CD96200001E2F90 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		FC6C7FDE1CD96200001E2F90 /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		FC6C7FDF1CD96200001E2F90 /* Quad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quad.swift; sourceTree = "<group>"; };
-		FC6C7FE01CD96200001E2F90 /* Units.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
 		FC6C7FE11CD96200001E2F90 /* Vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
 		FC6C7FF11CD962E4001E2F90 /* HeavyCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HeavyCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6C7FF31CD962E4001E2F90 /* HeavyCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeavyCore.h; sourceTree = "<group>"; };
 		FC6C7FFA1CD962E4001E2F90 /* HeavyCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeavyCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC6C7FFF1CD962E5001E2F90 /* HeavyCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeavyCoreTests.swift; sourceTree = "<group>"; };
 		FC6C80011CD962E5001E2F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC6C80081CD96376001E2F90 /* Core.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Core.playground; path = ../../Playgrounds/Core.playground; sourceTree = "<group>"; };
+		FC6EF23B1D0E07850064F21F /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		FC6EF2411D0E33FA0064F21F /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		FCA4E4DD1CE685AC00362AD9 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		FCA4E4DE1CE685AC00362AD9 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		FCA4E4E31CE6860600362AD9 /* Angle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
@@ -117,7 +122,6 @@
 				FC6C7FDE1CD96200001E2F90 /* Geometry.swift */,
 				FC6C7FDD1CD96200001E2F90 /* Point.swift */,
 				FC6C7FDF1CD96200001E2F90 /* Quad.swift */,
-				FC6C7FE01CD96200001E2F90 /* Units.swift */,
 				FC6C7FE11CD96200001E2F90 /* Vector.swift */,
 			);
 			name = Geometry;
@@ -127,10 +131,12 @@
 		FC6C7FE21CD96200001E2F90 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				FC6EF2411D0E33FA0064F21F /* Task.swift */,
+				FC6EF23B1D0E07850064F21F /* Time.swift */,
 				FCA4E4DE1CE685AC00362AD9 /* Timer.swift */,
 				FCDB9B0C1CFA3B7A00F153A0 /* UUID.swift */,
-				FCDB9B0B1CFA39D000F153A0 /* Extensions */,
 				FCA4E4F01CE6CF7700362AD9 /* Math */,
+				FCDB9B0B1CFA39D000F153A0 /* Extensions */,
 			);
 			name = Utilities;
 			path = ../../Common/Utilities;
@@ -139,7 +145,7 @@
 		FC6C7FFE1CD962E5001E2F90 /* HeavyCoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				FC6C7FFF1CD962E5001E2F90 /* HeavyCoreTests.swift */,
+				FC64B9CA1D0F68C6008B4E61 /* TimeTests.swift */,
 				FC6C80011CD962E5001E2F90 /* Info.plist */,
 			);
 			path = HeavyCoreTests;
@@ -159,9 +165,9 @@
 			isa = PBXGroup;
 			children = (
 				FC6C80081CD96376001E2F90 /* Core.playground */,
-				FC1F90B51CF4E7FA0049C4D2 /* Frameworks */,
 				FCA7CF511CD1643400AC174C /* HeavyCore */,
 				FC6C7FFE1CD962E5001E2F90 /* HeavyCoreTests */,
+				FC1F90B51CF4E7FA0049C4D2 /* Frameworks */,
 				FCA7CF501CD1643400AC174C /* Products */,
 			);
 			indentWidth = 2;
@@ -319,9 +325,9 @@
 				FC5995AA1D0B642A006E3A6C /* Random.swift in Sources */,
 				FC5995A51D0B642A006E3A6C /* Timer.swift in Sources */,
 				FC5995A01D0B642A006E3A6C /* Geometry.swift in Sources */,
+				FC6EF23C1D0E07850064F21F /* Time.swift in Sources */,
 				FC5995A71D0B642A006E3A6C /* CFUUID.swift in Sources */,
 				FC5995A61D0B642A006E3A6C /* UUID.swift in Sources */,
-				FC5995A31D0B642A006E3A6C /* Units.swift in Sources */,
 				FC59959F1D0B642A006E3A6C /* Angle.swift in Sources */,
 				FC59959C1D0B642A006E3A6C /* BehaviorStore.swift in Sources */,
 				FC59959E1D0B642A006E3A6C /* Scene.swift in Sources */,
@@ -329,6 +335,7 @@
 				FC5995A21D0B642A006E3A6C /* Quad.swift in Sources */,
 				FC59959B1D0B642A006E3A6C /* Graph.swift in Sources */,
 				FC59959A1D0B642A006E3A6C /* Behavior.swift in Sources */,
+				FC6EF2421D0E33FA0064F21F /* Task.swift in Sources */,
 				FC5995A81D0B642A006E3A6C /* Math.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,7 +344,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC6C80001CD962E5001E2F90 /* HeavyCoreTests.swift in Sources */,
+				FC64B9CB1D0F68C6008B4E61 /* TimeTests.swift in Sources */,
+				FC6EF2431D0E33FA0064F21F /* Task.swift in Sources */,
+				FC64B9CD1D0F87AF008B4E61 /* Time.swift in Sources */,
+				FC64B9CC1D0F879F008B4E61 /* Timer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +365,7 @@
 		FC6C80031CD962E5001E2F90 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -373,7 +383,7 @@
 		FC6C80041CD962E5001E2F90 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -395,6 +405,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.heavyengine.HeavyCoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_STYLE = debugging;
 			};
 			name = Debug;
 		};
@@ -405,6 +416,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.heavyengine.HeavyCoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_STYLE = debugging;
 			};
 			name = Release;
 		};
